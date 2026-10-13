@@ -1,52 +1,73 @@
-# Renyi Geng · Rony — 个人学术网站 V1.9
+# Renyi Geng (Rony) | 耿仁义
 
-这是尚未发布的个人学术网站静态源码，延续 V1.8 的页面设计。V1.9 的修改范围是网站图标目录与相应网页引用，不修改个人介绍和科研方向。
+**M.S. Student at the University of Science and Technology of China (USTC)**  
+Research at the Changchun Institute of Applied Chemistry (CIAC)
 
-## 网站文件结构
+**AI for Science · Scientific Agents · Scientific Reasoning**
 
-```text
-index.html                     # 网站首页
-favicon.ico                    # 根目录保留，供浏览器自动识别
-site.webmanifest              # 手机主屏幕图标配置
-assets/
-  icons/
-    favicon-source.jpg         # 原始动漫头像（可单独替换）
-    favicon-16x16.png
-    favicon-32x32.png
-    favicon-256.png
-    apple-touch-icon.png
-    android-chrome-192x192.png
-    android-chrome-512x512.png
-  renyi-portrait.jpg           # 首页人物照片
-  ustc-emblem.svg              # 用户提供的校徽
-  neau-emblem.svg              # 用户提供的校徽
-  ...
-notes/index.html              # 随笔首页
-notes/posts.json              # GitHub Pages 构建时生成的文章列表
-_posts/                       # 已确认可以公开的 Markdown 文章
-_layouts/post.html            # 每篇文章的排版模板
-templates/post-template.md    # 写作模板（不会自动发布）
-_config.yml                   # Jekyll 配置
-BLOG_GUIDE.md                 # 从零发布博客的教程
-```
+*Curiosity-driven research at the intersection of AI and Science.*
 
-## 本地预览
+🌐 **[Personal Website](https://renyigeng.github.io/)** · 📖 **[Notes & Essays](https://renyigeng.github.io/notes/)** · ✉️ **[Email](mailto:renyigeng@mail.ustc.edu.cn)**
 
-1. 将 ZIP **完整解压**，进入包含 `index.html` 的目录。
-2. 双击 `index.html` 打开主页；点击顶部 **Notes / 随笔** 即可进入 `notes/index.html`（这版已改为显式文件链接，避免本地点击文件夹时看到“目录索引”）。也可以直接双击 `notes/index.html`。
-3. 或在该目录用 PowerShell 运行 `python -m http.server 8000 --bind 127.0.0.1`，打开 `http://localhost:8000/` 和 `http://localhost:8000/notes/`。
-4. 本地 `http.server` 不运行 Jekyll，所以本地不会自动显示新 Markdown 文章。正式 GitHub Pages 发布后会生成。
+---
 
-## 发布文章与上线
+## About Me | 关于我
 
-第一次部署与发布第一篇博客的详细步骤见 **`BLOG_GUIDE.md`**。
+Hi! I'm **Renyi Geng**, also known as **Rony**, a master's student in Polymer Chemistry and Physics at USTC, conducting research at CIAC.
 
-## 图标处理
+I grew up in Tai'an, Shandong Province, China. My interest in computing began in high school, and my academic journey has since taken me from Food Science and Engineering to interdisciplinary research at the intersection of artificial intelligence and the natural sciences.
 
-- `favicon.ico` 留在根目录，最兼容浏览器默认识别。
-- **所有其他图标及原图**放在 `assets/icons/`，首页、随笔首页、文章模板及 `site.webmanifest` 全部使用新位置。
-- 清除旧缓存：在网站页面按 `Ctrl+F5`，浏览器标签图标可能需要重新打开标签才能更新。
+My primary academic interest is **AI for Science**. I am particularly interested in how artificial intelligence can contribute to scientific reasoning, computational exploration, and the discovery of new scientific knowledge.
 
-## 许可与素材
+My long-term aspiration is to become an independent researcher capable of identifying meaningful scientific questions and developing rigorous approaches to investigating them.
 
-未添加 MIT LICENSE。肖像、动漫头像、校徽、泰山图片等素材的版权与公开使用条件须单独确认；详见 `COPYRIGHT_AND_ASSETS.md` 与 `ASSET_SOURCES.md`。
+你好！我是**耿仁义（Rony）**，成长于山东泰安，现为中国科学技术大学高分子化学与物理专业硕士研究生，在中国科学院长春应用化学研究所开展科研工作。
+
+我从高中时期便开始接触编程，本科就读于东北农业大学食品科学与工程专业。随着学习经历的不断深入，我逐渐明确了对人工智能与自然科学交叉研究的兴趣。
+
+目前，我主要关注 **AI for Science**，尤其希望探索人工智能如何参与科学推理、计算探索与知识发现，并在未来成长为一名能够独立提出和研究重要科学问题的科研工作者。
+
+## Research Interests | 研究兴趣
+
+- **AI for Science** — 人工智能驱动的科学研究
+- **Scientific Agents** — 科学智能体
+- **Scientific Reasoning** — 科学推理
+- **Scientific Machine Learning** — 科学机器学习
+- **Intelligent Scientific Discovery** — 智能科学发现
+
+## Education | 教育经历
+
+**University of Science and Technology of China (USTC)**  
+M.S. Student, Polymer Chemistry and Physics  
+Research at Changchun Institute of Applied Chemistry (CIAC)
+
+**中国科学技术大学** · 高分子化学与物理 · 硕士研究生
+
+**Northeast Agricultural University (NEAU)**  
+B.Eng., Food Science and Engineering  
+Honors Program for Integrated Undergraduate and Graduate Education
+
+**东北农业大学** · 食品科学与工程 · 拔尖人才创新班
+
+## Notes & Essays | 随笔
+
+A personal space for reading, thinking, and exploring ideas across artificial intelligence, science, and life.
+
+一个记录阅读、思考与探索的角落，分享 AI for Science、学术阅读以及科研之外的生活感悟。
+
+**[Explore My Notes →](https://renyigeng.github.io/notes/)**
+
+## Get in Touch | 欢迎交流
+
+I welcome academic conversations, interdisciplinary discussions, and exchanges of ideas. Feel free to reach out!
+
+欢迎对 AI for Science 和交叉学科研究感兴趣的朋友来信交流，也欢迎分享有趣的科学问题与研究想法。
+
+**Email:** renyigeng@mail.ustc.edu.cn  
+**GitHub:** [@renyigeng](https://github.com/renyigeng)
+
+---
+
+*This repository contains the source code of my personal academic website, hosted on GitHub Pages. Content and third-party assets retain their respective rights; see [Copyright & Assets](COPYRIGHT_AND_ASSETS.md).*
+
+© 2026 Renyi Geng (Rony)
