@@ -273,3 +273,9 @@ body.notes-article .post-photo{background:rgba(255,255,255,.10)}
   body.notes-article .article-shell{background:rgba(11,19,40,.49)}
   body.notes-article .article-content{font-size:15px;line-height:2}
 }
+
+/* v2.10 - unobtrusive explicit stats status when third-party service is unavailable */
+.counter-status{display:inline-block;margin-left:8px;font:11px/1.5 "Segoe UI","PingFang SC",sans-serif;color:inherit;opacity:.7}
+
+/* v2.11 GoatCounter status: no fabricated counts, only publicly enabled stats. */
+.gc-status{margin-left:8px;font:11px/1.6 var(--sans);opacity:.82;letter-spacing:0}.gc-status:empty{display:none}
