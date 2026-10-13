@@ -37,6 +37,6 @@ The homepage Mount Tai photograph now uses the site owner's own photo, stored at
 ### V2.6 Notes 背景
 - `assets/blog-night-sakura.jpg`：本次由用户上传提供的樱花星空动漫插画，经过移除附带元数据后转换为网页 JPEG，**权利来源尚未核验**；网站所有者发布前须确认公开使用许可。与学术主页或用户自拍照片区别管理。
 
-### QQ Logo (V2.8)
+### QQ Logo（V2.9 线框版）
 
-The QQ contact icon uses the actual brand silhouette from [Simple Icons (icons/qq.svg)](https://github.com/simple-icons/simple-icons/blob/develop/icons/qq.svg), whose icon artwork is provided under CC0. QQ is a trademark of Tencent; using the logo for a contact method does not imply affiliation or endorsement.
+`assets/icons/qq.svg` 采用 [Tabler Icons — brand-qq](https://github.com/tabler/tabler-icons/blob/main/icons/outline/brand-qq.svg) 的 QQ 企鹅线框图标，按本站 Contact 图标线宽与颜色做了样式调整。Tabler Icons 使用 MIT License（https://github.com/tabler/tabler-icons/blob/main/LICENSE）。QQ 名称及标识属于腾讯相关商标，不代表本站与腾讯存在合作或背书。

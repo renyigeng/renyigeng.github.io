@@ -206,3 +206,70 @@ body.notes-article .article-shell{background:rgba(255,255,255,.88);border-color:
  body.notes-index .topic{background:rgba(14,22,45,.24)}
 }
 @media(prefers-reduced-motion:reduce){body.notes-index .topic:hover{transform:none}}
+
+
+/* V2.9: remove the misplaced green link-border under post cover images.
+   Only text links should retain an underline / border. */
+body.notes-index .article-card a.post-preview-cover,
+body.notes-index .article-card a.post-preview-cover:hover{
+  border:0;
+  border-bottom:0;
+  text-decoration:none;
+  display:block;
+  line-height:0;
+}
+body.notes-index .post-preview-cover img{display:block;width:100%;border:0}
+body.notes-article .post-photo a,
+body.notes-article .post-photo a:hover{
+  text-decoration:none;
+  border:0;
+  display:block;
+  line-height:0;
+}
+body.notes-article .post-photo img{display:block}
+
+/* V2.9: article reading panel now uses the same night-glass palette as Notes cards.
+   Slightly denser for sustained, comfortable Chinese and English reading. */
+body.notes-article .article-shell{
+  background:rgba(11,19,40,.43);
+  border:1px solid rgba(255,255,255,.31);
+  box-shadow:0 18px 54px rgba(3,9,28,.26);
+  backdrop-filter:blur(16px) saturate(112%);
+  -webkit-backdrop-filter:blur(16px) saturate(112%);
+}
+body.notes-article .article-content{
+  color:#fff8fc;
+  font-weight:400;
+  text-shadow:0 1px 2px rgba(3,9,28,.22);
+}
+body.notes-article .article-content h2,
+body.notes-article .article-content h3,
+body.notes-article .article-content h4{color:#fff8fc}
+body.notes-article .article-content a{color:#ffe0ef;text-underline-offset:4px}
+body.notes-article .article-content a:hover{color:#fff}
+body.notes-article .article-content blockquote{
+  color:#eee6f4;
+  border-left-color:rgba(255,208,231,.72);
+  background:rgba(16,24,50,.26);
+  border-radius:0 6px 6px 0;
+}
+body.notes-article .article-content pre{
+  color:#f9f6fc;
+  background:rgba(6,13,34,.67);
+  border:1px solid rgba(255,255,255,.15);
+}
+body.notes-article .article-content code{color:#fff2f7;background:rgba(9,19,41,.67)}
+body.notes-article .article-content pre code{background:transparent}
+body.notes-article .article-content th,
+body.notes-article .article-content td{border-color:rgba(255,255,255,.22)}
+body.notes-article .article-content th{background:rgba(255,255,255,.09)}
+body.notes-article .article-end-note{
+  border-top:1px solid rgba(255,255,255,.25);
+  color:rgba(255,243,249,.80);
+}
+body.notes-article .article-end-note a{color:#ffe5f2}
+body.notes-article .post-photo{background:rgba(255,255,255,.10)}
+@media(max-width:600px){
+  body.notes-article .article-shell{background:rgba(11,19,40,.49)}
+  body.notes-article .article-content{font-size:15px;line-height:2}
+}
