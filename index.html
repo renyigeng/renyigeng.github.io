@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f8f7f3" />
   <meta name="color-scheme" content="light" />
-  <meta name="description" content="Renyi Geng (Rony) / 耿仁义 — Master's student at USTC, research at CIAC. Interested in AI for Science, scientific agents, and scientific reasoning." />
+  <meta name="description" content="Renyi Geng (Rony) / 耿仁义 — M.S. student in Polymer Physics at USTC, conducting research at CIAC. AI for Science, Scientific Agents, and Scientific Reasoning." />
   <meta property="og:title" content="Renyi Geng | 耿仁义" />
   <meta property="og:description" content="Curiosity-driven research at the intersection of AI and Science." />
   <meta property="og:type" content="website" />
@@ -94,9 +94,6 @@
   .about-bilingual p{font:14px/1.55 var(--serif);color:#303b36;margin:0 0 11px}
   .about-zh{border-left:1px solid #d2d7d2;padding-left:26px}
   .about-zh p{font-size:13.5px;line-height:1.69}
-  .about-link{display:inline-block;font:14px var(--serif);color:var(--green);background:transparent;border:0;border-bottom:1px solid #66877a;padding:0 0 3px;margin-top:1px;cursor:pointer}
-  .about-link:hover{color:#153d2e}
-  .about-extra[hidden]{display:none}
   .lang-zh .about-en{order:2;opacity:.89}
   .lang-zh .about-zh{order:1;grid-column:1;grid-row:1;border-left:0;border-right:1px solid #d2d7d2;padding-left:0;padding-right:25px}
   .lang-zh .about-en{grid-column:2;grid-row:1}
@@ -222,6 +219,65 @@ html[lang="zh-CN"] body{font-family:var(--cn-sans)}
 .name-alias strong{color:#2c5b4c;font:italic 600 17px/1.3 Georgia,serif;letter-spacing:.01em}
 .alias-period{margin-left:-4px}
 @media(max-width:680px){.name-alias{margin-bottom:17px}}
+
+/* Research Interests: align the bilingual card text with the title after its icon.
+   Icon width: 21px; right gap: 7px; resulting text indent: 28px. */
+.card-sub,.card-description{margin-left:28px}
+
+
+/* v2.1 academic highlights: publication and awards sit alongside education, with no exaggerated claims. */
+.highlights-grid{display:grid;grid-template-columns:minmax(0,1.32fr) minmax(0,.9fr);gap:16px}
+.highlight-panel{background:#fcfbf8;border:1px solid #e2e7df;border-radius:10px;padding:24px 28px;min-width:0}
+.highlight-eyebrow{display:flex;align-items:center;gap:10px;font:11px/1.5 var(--sans);font-weight:600;letter-spacing:.12em;color:#557064;margin-bottom:18px}
+.highlight-eyebrow-line{height:1px;width:20px;background:#729183;flex-shrink:0}
+.publication-title{display:block;font:normal clamp(18px,1.8vw,23px)/1.38 var(--serif);color:#1d3f33;letter-spacing:-.015em;transition:color .2s}
+.publication-title:hover{color:#378265;text-decoration:underline;text-underline-offset:5px}
+.publication-title span{font-size:.75em}
+.publication-authors{font:13px/1.6 var(--serif);color:#586860;margin:14px 0 3px}
+.publication-authors strong{font-weight:700;color:#294f40}
+.publication-journal{font:13px/1.6 var(--serif);color:#647169;margin:0 0 12px}
+.publication-tags{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 12px}
+.publication-tags span,.publication-tags a{font:11px/1.2 var(--sans);border:1px solid #d9e3da;border-radius:4px;padding:6px 9px;background:#f3f6ef;color:#436453}
+.publication-tags a{text-decoration:none;transition:background .2s}
+.publication-tags a:hover{background:#e5efe6}
+.publication-desc{font:13px/1.65 var(--serif);color:#617068;margin:0}
+.honor-entry{display:grid;grid-template-columns:54px minmax(0,1fr);gap:13px;border-top:1px solid #e1e7df;padding:14px 0}
+.honor-entry:first-of-type{border-top:0}
+.honor-entry time{font:15px/1.3 Georgia,serif;color:#587366}
+.honor-entry strong{display:block;font:normal 16px/1.48 var(--serif);color:#233d31;margin-bottom:4px}
+.honor-entry span{display:block;font:12px/1.55 var(--cn-serif);color:#62736a}
+@media(max-width:960px){.highlights-grid{grid-template-columns:1fr}}
+@media(max-width:680px){.highlight-panel{padding:19px 17px}.publication-title{font-size:19px}.honor-entry{grid-template-columns:48px minmax(0,1fr);gap:10px}}
+
+/* v2.2 — longer, research-specific interests; publications split into independent entries */
+.card-title{line-height:1.34;min-height:2.68em;display:flex;align-items:flex-start}
+.card-icon{flex:0 0 21px;margin-top:2px}
+.card-sub,.card-description{margin-left:28px}
+.publication-item + .publication-item{border-top:1px solid #e0e6de;margin-top:21px;padding-top:21px}
+.publication-item .publication-title{font-size:clamp(17px,1.5vw,21px);overflow-wrap:anywhere}
+.publication-item .publication-authors{margin-top:11px}
+@media(max-width:680px){.card-title{font-size:15px;min-height:2.68em}.card-sub,.card-description{margin-left:28px}.publication-item .publication-title{font-size:18px}}
+
+
+/* v2.3 — condensed award timeline with optional access to all 11 honors. */
+.honors-count{margin-left:auto;display:inline-grid;place-items:center;min-width:25px;height:25px;padding:0 6px;border:1px solid #d7e3d8;border-radius:50%;font:12px Georgia,serif;letter-spacing:0;color:#3e6b55;background:#f4f7f0}
+.honors-visible .honor-entry:first-child{border-top:0;padding-top:4px}
+.honors-more{border-top:1px solid #e1e7df;margin-top:6px}
+.honors-more summary{display:flex;align-items:center;justify-content:space-between;gap:10px;cursor:pointer;padding:15px 1px 4px;font:13px/1.4 var(--sans);font-weight:600;color:#326a50;list-style:none}
+.honors-more summary::-webkit-details-marker{display:none}
+.honors-more summary:focus-visible{outline:2px solid #326a50;outline-offset:5px;border-radius:2px}
+.honors-more summary:hover{text-decoration:underline;text-underline-offset:4px}
+.honors-chevron{font:21px/1 Georgia,serif;transition:transform .2s;margin-left:auto}
+.honors-more[open] .honors-chevron{transform:rotate(180deg)}
+.honors-collapse-label,.honors-more[open] .honors-expand-label{display:none}
+.honors-more[open] .honors-collapse-label{display:inline}
+.honors-older{padding-top:8px}
+.honors-older .honor-entry:first-child{border-top:0}
+.honors-panel .honor-entry strong{font-size:15px;line-height:1.44}
+.honors-panel .honor-entry span{font-size:12px;line-height:1.48}
+.honors-panel .honor-entry{padding:11px 0}
+@media(max-width:680px){.honors-panel .honor-entry{padding:12px 0}}
+
 </style>
   <!-- Browser tab / bookmark / phone home-screen icons -->
   <link rel="icon" href="favicon.ico" sizes="any" />
@@ -240,11 +296,12 @@ html[lang="zh-CN"] body{font-family:var(--cn-sans)}
         <a href="#about" data-nav="about" data-i18n="about">About</a>
         <a href="#research" data-nav="research" data-i18n="research">Research</a>
         <a href="#education" data-nav="education" data-i18n="education">Education</a>
-        <a href="notes/index.html" data-i18n="notes">Notes</a>
+        <a href="#highlights" data-nav="highlights" data-i18n="highlights">Highlights</a>
+        <a href="notes/" data-i18n="notes">Notes</a>
         <a href="#contact" data-nav="contact" data-i18n="contact">Contact</a>
       </nav>
       <div class="lang" role="group" aria-label="Choose website language"><button type="button" id="lang-en" aria-pressed="true">EN</button><span aria-hidden="true">|</span><button type="button" id="lang-zh" aria-pressed="false">中文</button></div>
-      <details class="menu" id="menu"><summary data-i18n="menu">Menu</summary><nav aria-label="Mobile navigation"><a href="#home" data-i18n="home">Home</a><a href="#about" data-i18n="about">About</a><a href="#research" data-i18n="research">Research</a><a href="#education" data-i18n="education">Education</a><a href="notes/index.html" data-i18n="notes">Notes</a><a href="#contact" data-i18n="contact">Contact</a></nav></details>
+      <details class="menu" id="menu"><summary data-i18n="menu">Menu</summary><nav aria-label="Mobile navigation"><a href="#home" data-i18n="home">Home</a><a href="#about" data-i18n="about">About</a><a href="#research" data-i18n="research">Research</a><a href="#education" data-i18n="education">Education</a><a href="#highlights" data-i18n="highlights">Highlights</a><a href="notes/" data-i18n="notes">Notes</a><a href="#contact" data-i18n="contact">Contact</a></nav></details>
     </div>
   </header>
   <main>
@@ -255,9 +312,9 @@ html[lang="zh-CN"] body{font-family:var(--cn-sans)}
           <h1 id="hero-title">Renyi Geng</h1>
           <p class="name-cn">耿仁义</p>
           <p class="name-alias"><span data-i18n="callme">You can also call me</span> <strong>Rony</strong><span class="alias-period">.</span></p>
-          <p class="school-line" data-i18n="role1">M.S. Student at the University of Science and Technology of China</p>
+          <p class="school-line" data-i18n="role1">M.S. Student · Polymer Physics · University of Science and Technology of China</p>
           <p class="school-line" data-i18n="role2">Research at Changchun Institute of Applied Chemistry (CIAC)</p>
-          <p class="school-line small" data-i18n="role3">University of Science and Technology of China (USTC) · Master's Student</p>
+          
           <div class="short-rule"></div>
           <h2 class="hero-tagline" data-i18n="tagline">Curiosity-driven research<br>at the intersection of AI and Science.</h2>
           <p class="tagline-cn" data-i18n="taglineCn">以好奇心驱动探索，在人工智能与自然科学的交汇处开展研究。</p>
@@ -272,19 +329,27 @@ html[lang="zh-CN"] body{font-family:var(--cn-sans)}
     <section class="section" id="research" aria-labelledby="research-title"><div class="shell" data-reveal>
       <div class="section-heading"><span class="section-number">01</span><h2 class="section-title" id="research-title"><span data-i18n="researchTitle">Research Interests</span><span class="zh">研究兴趣</span></h2><a class="section-more" href="#about"><span data-i18n="discoverMore">More</span>&nbsp; →</a></div>
       <div class="cards">
-        <article class="card"><div class="card-visual"><img src="assets/card-ai.webp" alt="Abstract green scientific wave visualization" loading="lazy"></div><h3 class="card-title"><svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-4-3-9 0-8 4-4 2-2 8 1 8-1 4 4 6 7 3 3 3 8 1 7-3 3 0 5-6 1-8 1-4-4-7-8-4v16M7 8c3 0 4 3 4 4M16 7c-3 1-4 3-4 5M7 15l5-3 5 4"/></svg>AI for Science</h3><p class="card-sub">人工智能驱动的科学研究</p><p class="card-description" data-i18n="card1">Exploring how AI can advance scientific understanding across the natural sciences.</p></article>
-        <article class="card"><div class="card-visual"><img src="assets/card-agent.webp" alt="Scientific agent network visualization" loading="lazy"></div><h3 class="card-title"><svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4" r="3"/><circle cx="4" cy="19" r="3"/><circle cx="20" cy="19" r="3"/><path d="M11 7 5 16M13 7l6 9M7 19h10"/></svg>Scientific Agents</h3><p class="card-sub">科学智能体</p><p class="card-description" data-i18n="card2">Investigating intelligent systems for scientific reasoning, planning, and exploration.</p></article>
-        <article class="card"><div class="card-visual"><img src="assets/card-reason.webp" alt="Scientific reasoning surface visualization" loading="lazy"></div><h3 class="card-title"><svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l9-5 9 5v10l-9 5-9-5zM3 7l9 5 9-5M12 12v10"/></svg>Scientific Reasoning</h3><p class="card-sub">科学推理</p><p class="card-description" data-i18n="card3">Understanding how AI can evaluate evidence, reason, and support scientific decisions.</p></article>
-        <article class="card"><div class="card-visual"><img src="assets/card-compute.webp" alt="Abstract intersecting translucent scientific fields" loading="lazy"></div><h3 class="card-title"><svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5 9-5ZM3 12l9 5 9-5M3 17l9 5 9-5"/></svg>Computational Science</h3><p class="card-sub">计算科学</p><p class="card-description" data-i18n="card4">Integrating domain knowledge, computation, and data for interdisciplinary research.</p></article>
+        <article class="card"><div class="card-visual"><img src="assets/card-ai.webp" alt="Abstract green scientific wave visualization" loading="lazy"></div><h3 class="card-title"><svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-4-3-9 0-8 4-4 2-2 8 1 8-1 4 4 6 7 3 3 3 8 1 7-3 3 0 5-6 1-8 1-4-4-7-8-4v16M7 8c3 0 4 3 4 4M16 7c-3 1-4 3-4 5M7 15l5-3 5 4"/></svg>AI for Science</h3><p class="card-sub">人工智能驱动的科学研究</p><p class="card-description" data-i18n="card1">Starting with scientific questions, using AI to uncover patterns and develop testable insights.</p></article>
+        <article class="card"><div class="card-visual"><img src="assets/card-agent.webp" alt="Scientific agent network visualization" loading="lazy"></div><h3 class="card-title"><svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4" r="3"/><circle cx="4" cy="19" r="3"/><circle cx="20" cy="19" r="3"/><path d="M11 7 5 16M13 7l6 9M7 19h10"/></svg>Scientific Agents</h3><p class="card-sub">科学智能体</p><p class="card-description" data-i18n="card2">Developing agents that plan computational studies, use research tools, and check their results.</p></article>
+        <article class="card"><div class="card-visual"><img src="assets/card-reason.webp" alt="Scientific reasoning surface visualization" loading="lazy"></div><h3 class="card-title"><svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l9-5 9 5v10l-9 5-9-5zM3 7l9 5 9-5M12 12v10"/></svg>Low-Data Materials Discovery</h3><p class="card-sub">低数据材料发现</p><p class="card-description" data-i18n="card3">Using literature knowledge and limited experimental data to guide reliable polymer and peptide material screening.</p></article>
+        <article class="card"><div class="card-visual"><img src="assets/card-compute.webp" alt="Abstract intersecting translucent scientific fields" loading="lazy"></div><h3 class="card-title"><svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5 9-5ZM3 12l9 5 9-5M3 17l9 5 9-5"/></svg>Experiment-Guided Biomaterials Design</h3><p class="card-sub">实验反馈驱动的生物材料设计</p><p class="card-description" data-i18n="card4">Connecting AI-guided candidate selection with experimental characterization and feedback to improve biomaterial design.</p></article>
       </div>
     </div></section>
     <section class="section" id="about" aria-labelledby="about-title"><div class="shell" data-reveal>
       <div class="section-heading"><span class="section-number">02</span><h2 class="section-title" id="about-title"><span data-i18n="aboutTitle">About Me</span><span class="zh">关于我</span></h2></div>
       <div class="about-grid">
-        <div class="mount-card"><img id="taishan-photo" src="https://upload.wikimedia.org/wikipedia/commons/a/a4/%E6%B3%B0%E5%B1%B1%E6%97%A5%E5%87%BA_-_Sunrise_at_Mount_Taishan_-_2012.07_-_panoramio.jpg" alt="真实泰山日出照片 / Sunrise at Mount Tai, Shandong" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/taishan-concept.webp';document.getElementById('taishan-credit').hidden=true;document.querySelector('.mount-caption').hidden=true;this.alt='泰山主题概念插画（离线备用）'"><div class="mount-caption">TAI’AN · SHANDONG<br><span data-i18n="hometown">My Hometown</span></div><a id="taishan-credit" class="photo-credit" href="https://commons.wikimedia.org/wiki/File:%E6%B3%B0%E5%B1%B1%E6%97%A5%E5%87%BA_-_Sunrise_at_Mount_Taishan_-_2012.07_-_panoramio.jpg" target="_blank" rel="noopener noreferrer" title="Photo by rheins, CC BY 3.0">© rheins · CC BY 3.0 ↗</a></div>
+        <div class="mount-card"><img id="taishan-photo" src="assets/taishan-user.jpg" alt="Sunrise photo at Mount Tai taken by Renyi Geng" loading="lazy"><div class="mount-caption">TAI’AN · SHANDONG<br><span data-i18n="hometown">My Hometown</span></div></div>
         <div class="about-bilingual">
-          <div class="about-en"><p>I'm Renyi Geng (耿仁义), a master's student at the University of Science and Technology of China (USTC), conducting research at the Changchun Institute of Applied Chemistry (CIAC).</p><p>I grew up in Tai'an, Shandong, China. My interest in computing began in high school, and I have long been fascinated by the possibilities of bringing artificial intelligence into scientific research.</p><p>With an interdisciplinary background in natural sciences, mathematics, and computation, I am now focusing on AI for Science, hoping to understand how AI can help us ask meaningful scientific questions and better understand the natural world.</p><div id="extra-en" class="about-extra" hidden><p>I studied Food Science and Engineering at Northeast Agricultural University in its honors training program. I hope to grow into an independent researcher who can identify important scientific questions and investigate them rigorously.</p></div><button class="about-link" type="button" id="about-more-en" aria-expanded="false">Read more →</button></div>
-          <div class="about-zh"><p>我是耿仁义，成长于山东泰安，现为中国科学技术大学硕士研究生，在中国科学院长春应用化学研究所（CIAC）开展科研工作。</p><p>我从高中时期便开始接触编程。大学入学前后，我逐渐对人工智能与自然科学的交叉产生兴趣。</p><p>如今，我更加关注人工智能如何助力我们提出有意义的科学问题，并深化对自然世界的理解。</p><div id="extra-zh" class="about-extra" hidden><p>本科就读于东北农业大学食品科学与工程专业，接受拔尖人才创新班的培养。我希望未来成为一名能够独立提出科学问题、以严谨方法开展研究的科研工作者。</p></div><button class="about-link" type="button" id="about-more-zh" aria-expanded="false">了解更多 →</button></div>
+          <div class="about-en">
+            <p>I'm Renyi Geng (Rony), a master's student focusing on polymer physics at the University of Science and Technology of China (USTC), conducting research at the Changchun Institute of Applied Chemistry (CIAC).</p>
+            <p>I grew up in Tai'an, Shandong. I began learning programming in high school and later studied Food Science and Engineering at Northeast Agricultural University, where I joined the honors training program.</p>
+            <p>My interests lie in AI for Science, from scientific agents and computational research to data-efficient materials discovery informed by experiments. I hope to become an independent researcher who approaches meaningful scientific questions with curiosity and rigor.</p>
+          </div>
+          <div class="about-zh">
+            <p>我是耿仁义（Rony），成长于山东泰安。现为中国科学技术大学高分子物理硕士研究生，在中国科学院长春应用化学研究所开展科研工作。</p>
+            <p>我从高中时期开始接触编程，本科就读于东北农业大学食品科学与工程专业，并接受拔尖人才创新班培养。</p>
+            <p>目前主要关注 AI for Science，包括科学智能体、低数据条件下的材料发现，以及与实验反馈相结合的生物材料设计。我希望从有意义的科学问题出发，逐步成长为能够独立提出问题、严谨开展研究的科研工作者。</p>
+          </div>
         </div>
       </div>
     </div></section>
@@ -292,14 +357,57 @@ html[lang="zh-CN"] body{font-family:var(--cn-sans)}
       <div class="section-heading"><span class="section-number">03</span><h2 class="section-title" id="education-title"><span data-i18n="educationTitle">Education</span><span class="zh">教育经历</span></h2></div>
       <div class="education-content">
         <div class="timeline">
-          <div class="edu-row"><div class="year">2025 —<br><span data-i18n="present">Present</span></div><img class="edu-mark" src="assets/ustc-emblem.svg" onerror="this.style.display='none';this.nextElementSibling.hidden=false" alt="中国科学技术大学校徽 / USTC emblem" loading="lazy" referrerpolicy="no-referrer"><span class="school-fallback ustc" hidden aria-label="USTC">USTC</span><div class="edu-info"><h3>University of Science and Technology of China (USTC)</h3><p class="edu-cn">中国科学技术大学</p><p class="edu-description" data-i18n="ustcDetail">M.S. in Polymer Chemistry and Physics · Master's Student · Research at CIAC</p></div></div>
+          <div class="edu-row"><div class="year">2025 —<br><span data-i18n="present">Present</span></div><img class="edu-mark" src="assets/ustc-emblem.svg" onerror="this.style.display='none';this.nextElementSibling.hidden=false" alt="中国科学技术大学校徽 / USTC emblem" loading="lazy" referrerpolicy="no-referrer"><span class="school-fallback ustc" hidden aria-label="USTC">USTC</span><div class="edu-info"><h3>University of Science and Technology of China (USTC)</h3><p class="edu-cn">中国科学技术大学</p><p class="edu-description" data-i18n="ustcDetail">M.S. Student · Polymer Physics · Research at CIAC</p></div></div>
           <div class="edu-row"><div class="year">2021 —<br>2025</div><img class="edu-mark" src="assets/neau-emblem.svg" onerror="this.style.display='none';this.nextElementSibling.hidden=false" alt="东北农业大学校徽 / NEAU emblem" loading="lazy" referrerpolicy="no-referrer"><span class="school-fallback neau" hidden aria-label="NEAU">NEAU</span><div class="edu-info"><h3>Northeast Agricultural University (NEAU)</h3><p class="edu-cn">东北农业大学</p><p class="edu-description" data-i18n="neauDetail">B.Eng. in Food Science and Engineering · Honors Training Program</p></div></div>
         </div>
         <div class="edu-illustration" aria-hidden="true"><img src="assets/edu-sketch.webp" alt="" loading="lazy"></div>
       </div>
     </div></section>
+    <section class="section" id="highlights" aria-labelledby="highlights-title"><div class="shell" data-reveal>
+      <div class="section-heading"><span class="section-number">04</span><h2 class="section-title" id="highlights-title"><span data-i18n="highlightsTitle">Publications &amp; Honors</span><span class="zh">论文与荣誉</span></h2></div>
+      <div class="highlights-grid">
+        <div class="highlight-panel publication-panel">
+          <div class="highlight-eyebrow"><span class="highlight-eyebrow-line"></span><span data-i18n="publicationLabel">PUBLICATIONS · 论文</span></div>
+          <article class="publication-item">
+            <a class="publication-title" href="https://doi.org/10.1016/j.tifs.2026.105721" target="_blank" rel="noopener noreferrer">AI in cheese manufacturing: A comprehensive review of technologies, applications, and future prospects <span aria-hidden="true">↗</span></a>
+            <p class="publication-authors">Nuo Xu, Biqi Liu, <strong>Renyi Geng</strong>, et al.</p>
+            <p class="publication-journal"><em>Trends in Food Science &amp; Technology</em> · 172 (2026) · 105721</p>
+            <div class="publication-tags"><span>Review</span><span>JIF 17.4</span><a href="https://doi.org/10.1016/j.tifs.2026.105721" target="_blank" rel="noopener noreferrer">DOI ↗</a></div>
+            <p class="publication-desc" data-i18n="publicationDesc">Reviewing AI techniques, applications and future directions in cheese manufacturing.</p>
+          </article>
+          <article class="publication-item">
+            <a class="publication-title" href="https://doi.org/10.1016/j.fbio.2024.104977" target="_blank" rel="noopener noreferrer">Metabolism and transcriptional response mechanisms insight into the Lacticaseibacillus paracasei under the intervention of milk powder storage by-products <span aria-hidden="true">↗</span></a>
+            <p class="publication-authors">Yu Shen, <strong>Renyi Geng</strong>, Jian He, et al.</p>
+            <p class="publication-journal"><em>Food Bioscience</em> · 61 (2024) · 104977</p>
+            <div class="publication-tags"><span>Research article</span><a href="https://doi.org/10.1016/j.fbio.2024.104977" target="_blank" rel="noopener noreferrer">DOI ↗</a></div>
+            <p class="publication-desc" data-i18n="publicationDesc2">Investigating how milk powder storage by-products affect probiotic metabolism and transcriptional responses.</p>
+          </article>
+        </div>
+        <div class="highlight-panel honors-panel">
+          <div class="highlight-eyebrow"><span class="highlight-eyebrow-line"></span><span data-i18n="honorsLabel">HONORS &amp; AWARDS · 荣誉奖项</span><span class="honors-count">11</span></div>
+          <div class="honors-visible">
+          <div class="honor-entry"><time datetime="2026">2026</time><div><strong data-i18n="honor1">Outstanding Communist Youth League Cadre</strong><span data-i18n="honor1Org">Changchun Institute of Applied Chemistry, CAS</span></div></div>
+          <div class="honor-entry"><time datetime="2026">2026</time><div><strong data-i18n="honor2">First Prize · East China Region</strong><span data-i18n="honor2Org">Global University Student Life Sciences Challenge</span></div></div>
+          <div class="honor-entry"><time datetime="2025">2025</time><div><strong data-i18n="honor3">Outstanding Graduate</strong><span data-i18n="honor3Org">Heilongjiang Province</span></div></div>
+          <div class="honor-entry"><time datetime="2025">2025</time><div><strong data-i18n="honor4">Outstanding Graduate</strong><span data-i18n="honor4Org">Northeast Agricultural University</span></div></div>
+          </div>
+          <details class="honors-more">
+            <summary><span class="honors-expand-label" data-i18n="honorsExpand">View all 11 awards</span><span class="honors-collapse-label" data-i18n="honorsCollapse">Show fewer awards</span><span class="honors-chevron" aria-hidden="true">⌄</span></summary>
+            <div class="honors-older">
+          <div class="honor-entry"><time datetime="2024">2024</time><div><strong data-i18n="honor5">Social Practice Scholarship</strong><span data-i18n="honor5Org">Northeast Agricultural University</span></div></div>
+          <div class="honor-entry"><time datetime="2024">2024</time><div><strong data-i18n="honor6">Outstanding Participant in Social Practice</strong><span data-i18n="honor6Org">Northeast Agricultural University</span></div></div>
+          <div class="honor-entry"><time datetime="2023">2023</time><div><strong data-i18n="honor7">Second Prize · “Intellectual Property Cup”</strong><span data-i18n="honor7Org">University Invention and Innovation Competition</span></div></div>
+          <div class="honor-entry"><time datetime="2023">2023</time><div><strong data-i18n="honor8">National Third Prize</strong><span data-i18n="honor8Org">National Undergraduate Life Sciences Competition</span></div></div>
+          <div class="honor-entry"><time datetime="2023">2023</time><div><strong data-i18n="honor9">Outstanding Communist Youth League Cadre</strong><span data-i18n="honor9Org">Northeast Agricultural University</span></div></div>
+          <div class="honor-entry"><time datetime="2022">2022</time><div><strong data-i18n="honor10">Social Work Scholarship</strong><span data-i18n="honor10Org">Northeast Agricultural University</span></div></div>
+          <div class="honor-entry"><time datetime="2022">2022</time><div><strong data-i18n="honor11">Jinlongyu Scholarship</strong></div></div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div></section>
     <section class="section" id="contact" aria-labelledby="contact-title"><div class="shell" data-reveal>
-      <div class="section-heading"><span class="section-number">04</span><h2 class="section-title" id="contact-title"><span data-i18n="contactTitle">Contact</span><span class="zh">联系方式</span></h2></div>
+      <div class="section-heading"><span class="section-number">05</span><h2 class="section-title" id="contact-title"><span data-i18n="contactTitle">Contact</span><span class="zh">联系方式</span></h2></div>
       <p class="contact-blurb" data-i18n="contactBlurb">I am always happy to exchange ideas about AI for Science, scientific reasoning, and interdisciplinary research. Feel free to reach out for a conversation or collaboration.</p>
       <div class="contact-grid">
         <div class="contact-entry"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 20c-5.5 1.8-5.5-3-7-3m16 6v-3.8a3.6 3.6 0 0 0-1-2.8c3.4-.4 7-1.6 7-7.3A5.7 5.7 0 0 0 22.5 5c.2-1.3.1-2.7-.5-4 0 0-2-.2-4 1.6a15 15 0 0 0-8 0C8-0.2 6 0 6 0c-.6 1.3-.7 2.7-.5 4A5.7 5.7 0 0 0 4 9.1c0 5.7 3.6 6.9 7 7.3a3.6 3.6 0 0 0-1 2.8V23" transform="translate(1 0) scale(.9)"/></svg><div><label>GitHub</label><a href="https://github.com/renyigeng" target="_blank" rel="noopener noreferrer">github.com/renyigeng</a></div></div>
@@ -308,22 +416,21 @@ html[lang="zh-CN"] body{font-family:var(--cn-sans)}
       </div>
     </div></section>
   </main>
-  <div class="shell footer"><span>© 2026 Renyi Geng · 耿仁义</span><span><a href="notes/index.html">Notes / 博客</a> · <span data-i18n="footer">Made with curiosity · Hosted on GitHub Pages</span></span></div>
+  <div class="shell footer"><span>© 2026 Renyi Geng · 耿仁义</span><span><a href="notes/">Notes / 博客</a> · <span data-i18n="footer">Made with curiosity · Hosted on GitHub Pages</span></span></div>
   <button class="back-to-top" id="back-top" type="button" aria-label="Back to top">↑</button>
   <script>
   (()=>{
     const dictionary={
-      en:{callme:'You can also call me',home:'Home',about:'About',research:'Research',education:'Education',notes:'Notes',contact:'Contact',menu:'Menu',role1:'M.S. Student at the University of Science and Technology of China',role2:'Research at Changchun Institute of Applied Chemistry (CIAC)',role3:'中国科学技术大学 · 硕士研究生',tagline:'Curiosity-driven research<br>at the intersection of AI and Science.',taglineCn:'以好奇心驱动探索，在人工智能与自然科学的交汇处开展研究。',heroBody:'I am interested in AI for Science, scientific reasoning, and intelligent scientific discovery. I hope to explore how AI can help us ask meaningful scientific questions and better understand the natural world.',learn:'Learn More',vision:'From Scientific Questions to Intelligent Discovery.',researchTitle:'Research Interests',discoverMore:'More',card1:'Exploring how AI can advance scientific understanding across the natural sciences.',card2:'Investigating intelligent systems for scientific reasoning, planning, and exploration.',card3:'Understanding how AI can evaluate evidence, reason, and support scientific decisions.',card4:'Integrating domain knowledge, computation, and data for interdisciplinary research.',aboutTitle:'About Me',hometown:'My Hometown',educationTitle:'Education',present:'Present',ustcDetail:'M.S. in Polymer Chemistry and Physics · Master\'s Student · Research at CIAC',neauDetail:'B.Eng. in Food Science and Engineering · Honors Training Program',contactTitle:'Contact',contactBlurb:'I am always happy to exchange ideas about AI for Science, scientific reasoning, and interdisciplinary research. Feel free to reach out for a conversation or collaboration.',location:'Location',city:'Changchun, Jilin, China',footer:'Made with curiosity · Hosted on GitHub Pages'},
-      zh:{callme:'也可以叫我',home:'首页',about:'关于我',research:'研究兴趣',education:'教育经历',notes:'随笔',contact:'联系',menu:'菜单',role1:'中国科学技术大学 · 高分子化学与物理专业硕士研究生',role2:'中国科学院长春应用化学研究所（CIAC）开展科研工作',role3:'University of Science and Technology of China (USTC)',tagline:'探索人工智能与自然科学交叉领域的更多可能。',taglineCn:'Curiosity-driven research at the intersection of AI and Science.',heroBody:'我关注 AI for Science、科学推理与智能驱动的科学发现，希望探索人工智能如何帮助我们提出有意义的科学问题，并深化对自然世界的理解。',learn:'了解更多',vision:'从科学问题出发，走向智能科学发现。',researchTitle:'Research Interests',discoverMore:'了解更多',card1:'探索人工智能如何深化对自然科学的理解并推动科学发现。',card2:'关注能够进行科学推理、规划和探索的智能系统。',card3:'探索人工智能如何评估证据、开展推理并辅助科学决策。',card4:'结合领域知识、计算方法与数据，开展交叉科学研究。',aboutTitle:'About Me',hometown:'我的家乡',educationTitle:'Education',present:'至今',ustcDetail:'高分子化学与物理 · 硕士在读 · CIAC 开展科研工作',neauDetail:'食品科学与工程 · 工学学士 · 拔尖人才创新班',contactTitle:'Contact',contactBlurb:'欢迎对 AI for Science、科学推理与交叉学科研究感兴趣的朋友来信交流。期待与你交流新的研究想法，也欢迎开展学术讨论与合作。',location:'所在城市',city:'中国 · 吉林长春',footer:'以好奇心为伴 · GitHub Pages 托管'}
+      en:{callme:'You can also call me',home:'Home',about:'About',research:'Research',education:'Education',highlights:'Highlights',notes:'Notes',contact:'Contact',menu:'Menu',role1:'M.S. Student · Polymer Physics · University of Science and Technology of China',role2:'Research at Changchun Institute of Applied Chemistry (CIAC)',tagline:'Curiosity-driven research<br>at the intersection of AI and Science.',taglineCn:'以好奇心驱动探索，在人工智能与自然科学的交汇处开展研究。',heroBody:'I am interested in AI for Science, scientific reasoning, and intelligent scientific discovery. I hope to explore how AI can help us ask meaningful scientific questions and better understand the natural world.',learn:'Learn More',vision:'From Scientific Questions to Intelligent Discovery.',researchTitle:'Research Interests',discoverMore:'More',card1:'Starting with scientific questions, using AI to uncover patterns and develop testable insights.',card2:'Developing agents that plan computational studies, use research tools, and check their results.',card3:'Using literature knowledge and limited experimental data to guide reliable polymer and peptide material screening.',card4:'Connecting AI-guided candidate selection with experimental characterization and feedback to improve biomaterial design.',aboutTitle:'About Me',hometown:'My Hometown',educationTitle:'Education',highlightsTitle:'Publications & Honors',publicationLabel:'PUBLICATIONS · 论文',honorsLabel:'HONORS & AWARDS · 荣誉奖项',publicationDesc:'Reviewing AI techniques, applications and future directions in cheese manufacturing.',publicationDesc2:'Investigating how milk powder storage by-products affect probiotic metabolism and transcriptional responses.',honor1:'Outstanding Communist Youth League Cadre',honor1Org:'Changchun Institute of Applied Chemistry, CAS',honor2:'First Prize · East China Region',honor2Org:'Global University Student Life Sciences Challenge',honor3:"Outstanding Graduate",honor4:"Outstanding Graduate",honor5:"Social Practice Scholarship",honor6:"Outstanding Participant in Social Practice",honor7:"Second Prize · “Intellectual Property Cup”",honor8:"National Third Prize",honor9:"Outstanding Communist Youth League Cadre",honor10:"Social Work Scholarship",honor11:"Jinlongyu Scholarship",honor3Org:"Heilongjiang Province",honor4Org:"Northeast Agricultural University",honor5Org:"Northeast Agricultural University",honor6Org:"Northeast Agricultural University",honor7Org:"University Invention and Innovation Competition",honor8Org:"National Undergraduate Life Sciences Competition",honor9Org:"Northeast Agricultural University",honor10Org:"Northeast Agricultural University",honorsExpand:"View all 11 awards",honorsCollapse:"Show fewer awards",present:'Present',ustcDetail:'M.S. Student · Polymer Physics · Research at CIAC',neauDetail:'B.Eng. in Food Science and Engineering · Honors Training Program',contactTitle:'Contact',contactBlurb:'I am always happy to exchange ideas about AI for Science, scientific reasoning, and interdisciplinary research. Feel free to reach out for a conversation or collaboration.',location:'Location',city:'Changchun, Jilin, China',footer:'Made with curiosity · Hosted on GitHub Pages'},
+      zh:{callme:'也可以叫我',home:'首页',about:'关于我',research:'研究兴趣',education:'教育经历',highlights:'成果与荣誉',notes:'随笔',contact:'联系',menu:'菜单',role1:'中国科学技术大学 · 高分子物理硕士研究生',role2:'中国科学院长春应用化学研究所（CIAC）开展科研工作',tagline:'探索人工智能与自然科学交叉领域的更多可能。',taglineCn:'Curiosity-driven research at the intersection of AI and Science.',heroBody:'我关注 AI for Science、科学推理与智能驱动的科学发现，希望探索人工智能如何帮助我们提出有意义的科学问题，并深化对自然世界的理解。',learn:'了解更多',vision:'从科学问题出发，走向智能科学发现。',researchTitle:'Research Interests',discoverMore:'了解更多',card1:'从科学问题出发，利用 AI 发现规律并形成可检验的认识。',card2:'让智能体规划计算研究、调用科研工具，并核验结果。',card3:'结合文献知识与少量实验数据，探索高分子和多肽材料的可靠筛选方法。',card4:'将 AI 辅助候选筛选与实验表征、反馈结合，逐步优化聚氨基酸等生物材料。',aboutTitle:'About Me',hometown:'我的家乡',educationTitle:'Education',highlightsTitle:'Publications & Honors',publicationLabel:'论文发表 · PUBLICATIONS',honorsLabel:'荣誉奖项 · HONORS & AWARDS',publicationDesc:'综述人工智能技术在奶酪制造各环节的应用、进展与挑战。',publicationDesc2:'研究奶粉储藏副产物对副干酪乳酪杆菌代谢及转录响应的影响。',honor1:'优秀共青团干部',honor1Org:'中国科学院长春应用化学研究所',honor2:'华东赛区一等奖',honor2Org:'全球大学生生命科学挑战赛',honor3:"黑龙江省优秀毕业生",honor4:"优秀毕业生",honor5:"社会实践奖学金",honor6:"社会实践积极分子",honor7:"二等奖",honor8:"国家级三等奖",honor9:"优秀共青团干部",honor10:"社会工作奖学金",honor11:"金龙鱼奖学金",honor3Org:"",honor4Org:"东北农业大学",honor5Org:"东北农业大学",honor6Org:"东北农业大学",honor7Org:"“知识产权杯”高校发明创新竞赛",honor8Org:"全国大学生生命科学竞赛",honor9Org:"东北农业大学",honor10Org:"东北农业大学",honorsExpand:"展开全部 11 项荣誉",honorsCollapse:"收起早期荣誉",present:'至今',ustcDetail:'高分子物理 · 硕士在读 · 长春应化所科研',neauDetail:'食品科学与工程 · 工学学士 · 拔尖人才创新班',contactTitle:'Contact',contactBlurb:'欢迎对 AI for Science、科学推理与交叉学科研究感兴趣的朋友来信交流。期待与你交流新的研究想法，也欢迎开展学术讨论与合作。',location:'所在城市',city:'中国 · 吉林长春',footer:'以好奇心为伴 · GitHub Pages 托管'}
     };
     const btnEn=document.getElementById('lang-en'),btnZh=document.getElementById('lang-zh');
     const safeSet=(key,value)=>{try{localStorage.setItem(key,value)}catch(e){}};
     const safeGet=(key)=>{try{return localStorage.getItem(key)}catch(e){return null}};
     function changeLanguage(lang){document.documentElement.lang=lang==='zh'?'zh-CN':'en';document.body.classList.toggle('lang-zh',lang==='zh');btnEn.setAttribute('aria-pressed',String(lang==='en'));btnZh.setAttribute('aria-pressed',String(lang==='zh'));for(const el of document.querySelectorAll('[data-i18n]')){const val=dictionary[lang][el.dataset.i18n];if(val!==undefined){if(el.dataset.i18n==='tagline'){el.innerHTML=val}else{el.textContent=val}}}safeSet('renyi-site-lang',lang)}
     btnEn.addEventListener('click',()=>changeLanguage('en'));btnZh.addEventListener('click',()=>changeLanguage('zh'));changeLanguage(safeGet('renyi-site-lang')==='zh'?'zh':'en');
-    for(const [button,extra] of [['about-more-en','extra-en'],['about-more-zh','extra-zh']]){const b=document.getElementById(button),e=document.getElementById(extra);b.addEventListener('click',()=>{const open=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',String(open));e.hidden=!open;b.textContent=button.endsWith('zh')?(open?'收起 ↑':'了解更多 →'):(open?'Read less ↑':'Read more →')})}
     const progress=document.getElementById('progress-fill'),back=document.getElementById('back-top');let ticking=false;
-    function scrollUpdate(){const max=document.documentElement.scrollHeight-window.innerHeight;progress.style.transform='scaleX('+Math.min(1,max>0?window.scrollY/max:0)+')';back.classList.toggle('visible',window.scrollY>450);const ids=['home','research','about','education','contact'];let cur='home';for(const id of ids){const el=document.getElementById(id);if(el.getBoundingClientRect().top<=window.innerHeight*.42){cur=id}}if(window.scrollY+window.innerHeight>=document.documentElement.scrollHeight-20)cur='contact';document.querySelectorAll('[data-nav]').forEach(el=>{if(el.dataset.nav===cur)el.setAttribute('aria-current','location');else el.removeAttribute('aria-current')});ticking=false}
+    function scrollUpdate(){const max=document.documentElement.scrollHeight-window.innerHeight;progress.style.transform='scaleX('+Math.min(1,max>0?window.scrollY/max:0)+')';back.classList.toggle('visible',window.scrollY>450);const ids=['home','research','about','education','highlights','contact'];let cur='home';for(const id of ids){const el=document.getElementById(id);if(el.getBoundingClientRect().top<=window.innerHeight*.42){cur=id}}if(window.scrollY+window.innerHeight>=document.documentElement.scrollHeight-20)cur='contact';document.querySelectorAll('[data-nav]').forEach(el=>{if(el.dataset.nav===cur)el.setAttribute('aria-current','location');else el.removeAttribute('aria-current')});ticking=false}
     window.addEventListener('scroll',()=>{if(!ticking){window.requestAnimationFrame(scrollUpdate);ticking=true}},{passive:true});window.addEventListener('resize',scrollUpdate);scrollUpdate();
     back.addEventListener('click',()=>window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'}));
     const motion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
