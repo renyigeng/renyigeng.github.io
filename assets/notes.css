@@ -20,3 +20,20 @@ h1 small{font:400 clamp(25px,2.5vw,35px)/1 var(--serif);color:#62766e;letter-spa
 @media(max-width:800px){.wrap{width:calc(100% - 40px)}.hero-grid{grid-template-columns:1fr;gap:30px}.hero-art{min-height:200px;max-width:360px}.notes-hero{padding:60px 0}.topics{grid-template-columns:1fr}.topic{min-height:initial}.topbar{height:66px}.brand{font-size:19px}.brand span{font-size:12px;margin-left:7px}.top-links{gap:10px}.lang{padding-left:10px}.empty{padding:28px}}
 @media(max-width:430px){.wrap{width:calc(100% - 34px)}.brand{font-size:17px}.brand span{font-size:11px}.top-links{font-size:11px}.top-links a:nth-child(2){display:none}h1 small{display:block;margin:12px 0 0}.hero-art{min-height:164px}.notes-hero{padding:48px 0}.section{padding:43px 0}.section-title{font-size:30px}.article-card{padding:23px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* v2.4 writing feed and four-photo personal essay */
+.post-preview-card{display:grid;grid-template-columns:minmax(190px,30%) minmax(0,1fr);gap:0;padding:0;overflow:hidden}
+.post-preview-cover{display:block;background:#e5ebe3;overflow:hidden;min-height:220px}
+.post-preview-cover img{width:100%;height:100%;min-height:220px;object-fit:cover;transition:transform .4s}
+.post-preview-cover:hover img{transform:scale(1.035)}
+.post-preview-copy{padding:26px 31px;align-self:center}
+.post-preview-meta{font-size:12px;color:var(--green2)}
+.post-preview-copy h2 a{color:var(--green);font-size:inherit;border:0}
+.post-preview-copy h2 a:hover{text-decoration:underline;text-underline-offset:4px}
+.post-preview-read{display:inline-block!important;margin-top:8px;color:var(--green)!important;font:13px/1.4 var(--serif);text-decoration:underline;text-underline-offset:4px}
+.article-content > p{margin:0 0 1.45em;line-height:2.05}
+.post-photo-grid{margin:38px 0 12px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.post-photo{padding:0;margin:0;overflow:hidden;border-radius:8px;min-width:0;background:#e7e8e3}
+.post-photo img{width:100%;height:235px;object-fit:cover;transition:transform .3s}
+.post-photo a:hover img{transform:scale(1.02)}
+@media(max-width:660px){.post-preview-card{grid-template-columns:1fr}.post-preview-cover{min-height:165px;max-height:205px}.post-preview-cover img{height:205px;min-height:0}.post-preview-copy{padding:22px}.post-photo-grid{gap:8px}.post-photo img{height:clamp(125px,32vw,200px)}}

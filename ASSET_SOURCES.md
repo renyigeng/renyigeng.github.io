@@ -28,3 +28,7 @@
 ## 2026-10-13 update
 
 The homepage Mount Tai photograph now uses the site owner's own photo, stored at `assets/taishan-user.jpg`; it no longer loads a third-party image from Wikimedia Commons. The other attribution notes describe historical sources of bundled assets.
+
+## 2026-09-28 随笔照片（V2.4）
+
+本次 `assets/posts/2026-09-28/` 下的四张照片均由网站所有者提供，用于《歌未竟，东方白》随笔。发布前应确认照片中其他人物同意公开；图片重编码后不保留原 EXIF 信息。

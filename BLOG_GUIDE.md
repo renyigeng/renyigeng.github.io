@@ -72,3 +72,14 @@ description: "开始在个人网站记录阅读与思考。"
 ## 6. 现在不需要学习的功能
 
 不用设置网站数据库、不用自建服务器、不用配置 Notion API、不用写 CI/CD 自动发布脚本。你完全可以先使用 Notion 写作 + GitHub 网页手动发布；写多了之后，再考虑半自动发布。
+
+## V2.4：主页和随笔页怎样自动同步？
+
+现在首页 Latest Notes 和 `/notes/` 列表都从 GitHub Pages/Jekyll 生成的 `notes/posts.json` 读取数据。
+
+- 只需要在 `_posts/` 新增一篇 Markdown，按 `YYYY-MM-DD-slug.md` 命名，并设置 `layout: post`，正式部署后两处列表会自动出现同一篇文章。
+- `cover: /assets/posts/你的文章目录/照片.jpg` 是可选封面字段；首页与随笔页都使用它作为封面。图片需要单独上传到 `assets/posts/`。
+- 可选 `category_en: Life & Reflection` 用于英文模式显示文章分类；中文分类使用 `category: 生活随笔`。
+- **正文只存在于 `_posts` 的 Markdown 中**，主页和随笔页不重复保存文章内容，更新一次即可。
+- 在 Windows 直接打开静态 `index.html` 或运行 `python -m http.server`，并不会运行 Jekyll；所以本地可能显示提示文字而不是文章卡片。正式 GitHub Pages 构建完成后会自动展示。
+- 第一篇文章已准备为 `_posts/2026-09-28-ge-wei-jing-dong-fang-bai.md`，对应四张照片在 `assets/posts/2026-09-28/`。**这些都是公开内容，上传前请确认照片中人物均同意公开。**

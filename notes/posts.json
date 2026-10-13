@@ -3,13 +3,16 @@ layout: null
 permalink: /notes/posts.json
 ---
 [
-{% for post in site.posts %}
+{% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+{% for post in sorted_posts %}
   {
     "title": {{ post.title | jsonify }},
     "url": {{ post.url | relative_url | jsonify }},
     "date": {{ post.date | date: "%Y-%m-%d" | jsonify }},
     "category": {{ post.category | default: "Notes" | jsonify }},
-    "description": {{ post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 180 | jsonify }}
+    "category_en": {{ post.category_en | default: "Notes" | jsonify }},
+    "description": {{ post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 180 | jsonify }},
+    "cover": {% if post.cover %}{{ post.cover | relative_url | jsonify }}{% else %}""{% endif %}
   }{% unless forloop.last %},{% endunless %}
 {% endfor %}
 ]
