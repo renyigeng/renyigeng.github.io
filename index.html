@@ -303,6 +303,9 @@ html[lang="zh-CN"] body{font-family:var(--cn-sans)}
 .site-stats-home{width:min(1120px,calc(100% - 40px));margin:0 auto 6px;padding:3px 0 17px;text-align:right;color:#7a8d80;font:11px/1.5 var(--sans);letter-spacing:.02em}
 .site-stats-home #busuanzi_site_pv,.site-stats-home #busuanzi_site_uv{color:#345b49;font-variant-numeric:tabular-nums;font-weight:600}
 @media(max-width:680px){.site-stats-home{text-align:center;padding:0 0 20px}}
+
+/* v2.8: authentic branded QQ icon, size aligned to other contact options */
+.contact-entry .contact-qq-icon{display:block;width:27px;height:27px;object-fit:contain;flex:0 0 27px}
 </style>
   <!-- Browser tab / bookmark / phone home-screen icons -->
   <link rel="icon" href="favicon.ico" sizes="any" />
@@ -444,7 +447,7 @@ html[lang="zh-CN"] body{font-family:var(--cn-sans)}
       <div class="contact-grid">
         <div class="contact-entry"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 20c-5.5 1.8-5.5-3-7-3m16 6v-3.8a3.6 3.6 0 0 0-1-2.8c3.4-.4 7-1.6 7-7.3A5.7 5.7 0 0 0 22.5 5c.2-1.3.1-2.7-.5-4 0 0-2-.2-4 1.6a15 15 0 0 0-8 0C8-0.2 6 0 6 0c-.6 1.3-.7 2.7-.5 4A5.7 5.7 0 0 0 4 9.1c0 5.7 3.6 6.9 7 7.3a3.6 3.6 0 0 0-1 2.8V23" transform="translate(1 0) scale(.9)"/></svg><div><label>GitHub</label><a href="https://github.com/renyigeng" target="_blank" rel="noopener noreferrer">github.com/renyigeng</a></div></div>
         <div class="contact-entry"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 8L22 6"/></svg><div><label>Email / 学术邮箱</label><a href="mailto:renyigeng@mail.ustc.edu.cn">renyigeng@mail.ustc.edu.cn</a></div></div>
-        <div class="contact-entry"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.3c2.7 0 4.7 2.1 4.7 5.5 0 1.5-.4 2.9-1 4.2.9.8 1.9 1.8 1.9 3.3 0 1.8-1.2 3.1-3 3.1-.9 0-1.8-.3-2.6-.8-.8.5-1.7.8-2.6.8-1.8 0-3-1.3-3-3.1 0-1.5 1-2.5 1.9-3.3-.6-1.3-1-2.7-1-4.2 0-3.4 2-5.5 4.7-5.5Z"/><path d="M9.6 20.1c.3.4.7.6 1.1.6.5 0 1-.3 1.3-.7.3.4.8.7 1.3.7.4 0 .8-.2 1.1-.6"/><path d="M10 8.8c-.1 0-.2.1-.2.2M14 8.8c.1 0 .2.1.2.2"/><path d="M10.6 11.8c.4.3.9.4 1.4.4s1-.1 1.4-.4"/></svg><div><label>QQ</label><p>1550875059</p></div></div>
+        <div class="contact-entry"><img class="contact-qq-icon" src="assets/icons/qq.svg" alt="" aria-hidden="true" width="27" height="27"><div><label>QQ</label><p>1550875059</p></div></div>
         <div class="contact-entry"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.8"/></svg><div><label data-i18n="location">Location</label><p data-i18n="city">Changchun, Jilin, China</p></div></div>
       </div>
     </div></section>
