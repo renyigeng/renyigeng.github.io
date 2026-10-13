@@ -122,3 +122,25 @@ body.notes-page::before{content:"";position:fixed;inset:0;z-index:-1;pointer-eve
  .notes-page *{scroll-behavior:auto!important}
  .scroll-chevron,.blog-back-top{transition:none}
 }
+
+
+/* V2.7 — blog polish: more transparent frosted panels, neutral tones, centered sakura heroine, and photo privacy updates. */
+body.notes-page::before{background:
+ linear-gradient(180deg,rgba(8,15,31,.26),rgba(10,21,40,.34)),
+ url("blog-night-sakura.jpg") 44% 45%/cover no-repeat}
+.notes-page .section>.wrap{background:rgba(255,255,255,.76);border:1px solid rgba(255,255,255,.52);box-shadow:0 18px 50px rgba(2,9,28,.20);backdrop-filter:blur(20px)}
+.notes-page .article-card{background:rgba(255,255,255,.58);border-color:rgba(41,68,60,.12)}
+.notes-page .topic{background:rgba(255,255,255,.42);border-color:rgba(41,68,60,.10)}
+.notes-page .empty{background:rgba(255,255,255,.32);border-color:rgba(255,255,255,.40)}
+.notes-page .article-shell{background:rgba(255,255,255,.80);border-color:rgba(255,255,255,.68);box-shadow:0 22px 74px rgba(2,9,28,.24)}
+.post-preview-cover{background:rgba(255,255,255,.22)}
+.post-preview-cover img{object-position:center 50%}
+.post-photo{background:rgba(255,255,255,.18)}
+.post-photo img{object-position:center center}
+@media(max-width:800px){body.notes-page::before{background:
+ linear-gradient(180deg,rgba(8,15,31,.30),rgba(10,21,40,.38)),
+ url("blog-night-sakura.jpg") 41% 44%/cover no-repeat}}
+@media(max-width:660px){.post-preview-cover img{object-position:center 48%}}
+@media(max-width:430px){body.notes-page::before{background:
+ linear-gradient(180deg,rgba(8,15,31,.32),rgba(10,21,40,.42)),
+ url("blog-night-sakura.jpg") 39% 42%/cover no-repeat}.notes-page .section>.wrap{background:rgba(255,255,255,.72)}.notes-page .article-shell{background:rgba(255,255,255,.84)}}
