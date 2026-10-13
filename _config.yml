@@ -1,0 +1,13 @@
+title: "Renyi Geng (Rony) | 耿仁义"
+description: "Personal academic website and writings on AI for Science."
+url: "https://renyigeng.github.io"
+baseurl: ""
+markdown: kramdown
+permalink: /notes/:year/:month/:day/:title/
+exclude:
+  - README.md
+  - BLOG_GUIDE.md
+  - ASSET_SOURCES.md
+  - COPYRIGHT_AND_ASSETS.md
+  - DEPLOY_CHECKLIST.md
+  - templates

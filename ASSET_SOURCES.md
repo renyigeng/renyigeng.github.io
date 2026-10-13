@@ -1,0 +1,24 @@
+# Website visual asset inventory / 网站素材说明
+
+## Education / 校徽
+
+- **中国科学技术大学：** `assets/ustc-emblem.svg`，来自本轮用户上传的 `中国科学技术大学-logo(1).svg`。本地备份 `assets/ustc-emblem.png`（512 × 512，供兼容性使用）。
+- **东北农业大学：** `assets/neau-emblem.svg`，来自本轮用户上传的 `东北农业大学-logo(1).svg`。本地备份 `assets/neau-emblem.png`（512 × 512）。
+- SVG 均为无外部引用的独立矢量图。本轮仅清理了 USTC SVG 文件不必要的 DTD 声明，其图形路径不变。
+- 两份校徽由用户提供，**未独立核实视觉规范、授权和使用条件**；请在公开部署前自行确认。
+
+## About / 泰山图
+
+- 首选远程摄影作品：`泰山日出 - Sunrise at Mount Taishan - 2012.07`，作者 rheins，Wikimedia Commons，CC BY 3.0。
+- 原件链接：https://commons.wikimedia.org/wiki/File:%E6%B3%B0%E5%B1%B1%E6%97%A5%E5%87%BA_-_Sunrise_at_Mount_Taishan_-_2012.07_-_panoramio.jpg
+- 版权协议：https://creativecommons.org/licenses/by/3.0/
+- 浏览器加载失败时会使用 `assets/taishan-concept.webp`，这是一张 AI 设计概念素材，并不是实际的泰山摄影。
+- 真实摄影文件尚未内置网站包，离线预览将看到备用概念图。
+
+## Portrait / 人物照片
+
+`assets/renyi-portrait.jpg` 是用户选定的 AI 优化人物图，来自用户提供的独立图片。面部与原照不一定逐像素一致。
+
+## Illustrations / 科研卡片
+
+`assets/card-*.webp`、`assets/edu-sketch.webp` 是概念设计素材，不作为任何研究成果或官方校园图示。

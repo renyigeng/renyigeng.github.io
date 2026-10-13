@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- University emblem files are supplied by the site owner and bundled as local SVG assets. -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f8f7f3" />
+  <meta name="color-scheme" content="light" />
+  <meta name="description" content="Renyi Geng (Rony) / 耿仁义 — Master's student at USTC, research at CIAC. Interested in AI for Science, scientific agents, and scientific reasoning." />
+  <meta property="og:title" content="Renyi Geng | 耿仁义" />
+  <meta property="og:description" content="Curiosity-driven research at the intersection of AI and Science." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://renyigeng.github.io/" />
+  <meta property="og:image" content="https://renyigeng.github.io/assets/renyi-portrait.jpg" />
+  <link rel="canonical" href="https://renyigeng.github.io/" />
+  <title>Renyi Geng (Rony) · 耿仁义 | AI for Science</title>
+  <style>
+  :root{--paper:#f8f7f3;--white:#fdfcf9;--ink:#16211f;--green:#244d3f;--green-2:#3e7964;--muted:#606e6b;--line:#dcded7;--soft:#eff0eb;--serif:Georgia,"Times New Roman","Noto Serif SC","Songti SC",SimSun,serif;--sans:"Segoe UI",-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;--content:1260px;--nav-height:65px}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:82px}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  button{font:inherit;cursor:pointer}
+  .shell{width:min(var(--content),calc(100% - 9.8vw));margin:0 auto}
+  .topbar{height:var(--nav-height);position:sticky;top:0;background:rgba(248,247,243,.96);backdrop-filter:blur(13px);border-bottom:1px solid #dfdfd8;z-index:80}
+  .topline{display:flex;align-items:center;justify-content:space-between;height:100%;gap:20px}
+  .wordmark{font-family:var(--serif);font-size:29px;letter-spacing:-.045em;white-space:nowrap}
+  .wordmark span{font-size:21px;letter-spacing:0;padding-left:7px}
+  .desktop-nav{height:100%;display:flex;align-items:center;gap:32px;margin-left:auto}
+  .desktop-nav a{height:100%;display:flex;align-items:center;position:relative;font:14px var(--serif);color:#28312f;transition:color .2s}
+  .desktop-nav a::after{content:"";height:2px;background:var(--green);position:absolute;bottom:-1px;left:0;right:0;transform:scaleX(0);transition:transform .25s}
+  .desktop-nav a:hover,.desktop-nav a[aria-current="location"]{color:var(--green)}
+  .desktop-nav a:hover::after,.desktop-nav a[aria-current="location"]::after{transform:scaleX(1)}
+  .lang{display:flex;align-items:center;margin-left:24px;gap:5px;font:13px var(--serif);white-space:nowrap}
+  .lang button{background:none;border:0;color:#737b76;padding:8px 4px}
+  .lang button[aria-pressed="true"]{color:var(--ink);font-weight:700}
+  .menu{display:none;position:relative}
+  .menu summary{list-style:none;cursor:pointer;border:1px solid var(--line);padding:8px 10px;border-radius:5px;font-size:13px}
+  .menu summary::-webkit-details-marker{display:none}
+  .menu nav{position:absolute;z-index:100;right:0;top:46px;display:grid;width:190px;background:var(--white);border:1px solid var(--line);box-shadow:0 20px 30px #23392b23;border-radius:8px;padding:8px}
+  .menu nav a{padding:11px;border-radius:5px}
+  .menu nav a:hover{background:#e9ede9}
+  .progress{position:fixed;left:0;top:0;height:3px;width:100%;z-index:100;pointer-events:none}
+  .progress span{display:block;height:100%;width:100%;background:var(--green);transform:scaleX(0);transform-origin:0 50%}
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:radial-gradient(ellipse 74% 93% at 82% 40%,#ecf1ed 0%,transparent 78%)}
+  .hero-inner{min-height:670px;position:relative;display:grid;grid-template-columns:52% 48%;align-items:center}
+  .hero-copy{position:relative;z-index:3;padding:56px 0 62px;max-width:650px}
+  .kicker{font:11px var(--serif);letter-spacing:.31em;text-transform:uppercase;color:#647c76;margin-bottom:23px}
+  .hero h1{font:normal clamp(62px,6.3vw,95px)/.99 var(--serif);letter-spacing:-.06em;margin:0 0 8px}
+  .name-cn{font:normal clamp(32px,3vw,44px)/1.18 var(--serif);letter-spacing:.08em;margin:0 0 15px}
+  .school-line{font:17px/1.5 var(--serif);color:#252f2c;max-width:610px;margin:0 0 1px}
+  .school-line.small{font-size:14px;color:#3a4441}
+  .short-rule{height:1px;background:linear-gradient(90deg,#466c60 0,#becbc4 80%,transparent);width:105px;margin:24px 0 20px}
+  .hero-tagline{font:italic clamp(25px,2.6vw,37px)/1.18 var(--serif);letter-spacing:-.035em;max-width:550px;margin:0 0 6px;color:#31403e}
+  .tagline-cn{font:16px/1.7 var(--serif);color:#36443d;margin:0 0 15px}
+  .hero-body{font:15px/1.67 var(--serif);max-width:575px;color:#4b5954;margin:0 0 21px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;font:14px var(--serif);border-radius:9px;min-height:46px;padding:11px 22px;transition:transform .2s ease,background .2s ease;border:1px solid #a3b4ab}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--green);color:#fff;border-color:var(--green);min-width:174px}
+  .btn-primary:hover{background:#1c3e32}
+  .btn-outline{background:#f9f9f5a1;color:var(--ink);min-width:148px}
+  .btn-outline:hover{background:#e6eae5}
+  .hero-media{position:relative;align-self:stretch;min-width:0;height:100%;max-height:670px;margin-right:-1px}
+  .hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:53% 48%;border-radius:0 0 12px 0}
+  .hero-media::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,var(--paper) 0%,rgba(248,247,243,.91) 2%,rgba(248,247,243,.43) 16%,transparent 35%)}
+  .vision-note{position:absolute;right:-26px;top:12%;z-index:4;width:168px;min-height:202px;padding:20px 23px;background:rgba(238,242,238,.90);border-radius:8px;backdrop-filter:blur(8px);font:italic 19px/1.48 var(--serif);color:#354641;box-shadow:0 1px 6px rgba(34,52,42,.04)}
+  .vision-note::before,.vision-note::after{content:"";display:block;width:21px;height:1px;background:#627d72}
+  .vision-note::before{margin:4px 0 22px}
+  .vision-note::after{margin:22px 0 0 auto}
+  .section{border-bottom:1px solid var(--line);padding:30px 0 30px}
+  .section-heading{display:flex;align-items:baseline;gap:28px;margin-bottom:24px}
+  .section-number{font:13px var(--serif);color:#82918d;min-width:19px}
+  .section-title{font:normal clamp(31px,3vw,43px)/1.12 var(--serif);letter-spacing:-.035em;margin:0}
+  .section-title .zh{font:normal 21px var(--serif);margin-left:15px;letter-spacing:0}
+  .section-more{margin-left:auto;font:14px var(--serif);color:var(--green)}
+  .section-more:hover{text-decoration:underline;text-underline-offset:6px}
+  .cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+  .card{background:linear-gradient(155deg,#f9f8f5,#f5f4ef);border:1px solid #e0e2db;border-radius:8px;padding:13px 19px 17px;min-height:284px;transition:transform .25s,box-shadow .25s}
+  .card:hover{transform:translateY(-5px);box-shadow:0 18px 36px #244d3f13}
+  .card-visual{height:129px;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+  .card-visual img{height:100%;width:100%;object-fit:contain;mix-blend-mode:multiply;filter:saturate(.83)}
+  .card-title{font:normal 18px/1.3 var(--serif);margin:0}
+  .card-sub{font:14px/1.45 var(--serif);margin:2px 0 10px;color:#3f544b}
+  .card-description{font:13px/1.57 var(--serif);margin:0 0 0 36px;color:#68726e}
+  .card-icon{width:21px;height:21px;vertical-align:-5px;margin-right:7px;stroke:var(--green);stroke-width:1.65;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .about-grid{display:grid;grid-template-columns:33% 1fr;gap:26px;align-items:stretch}
+  .mount-card{height:308px;overflow:hidden;position:relative;border-radius:7px;background:#d3d8d0}
+  .mount-card img{height:100%;width:100%;object-fit:cover;object-position:50% 50%;filter:saturate(.9)}
+  .mount-card::after{content:"";position:absolute;inset:40% 0 0;background:linear-gradient(transparent,#18352eaa)}
+  .mount-caption{position:absolute;bottom:18px;left:20px;color:#fff;z-index:1;font:13px/1.55 var(--serif)}
+  .about-bilingual{display:grid;grid-template-columns:1.32fr .88fr;gap:28px}
+  .about-bilingual p{font:14px/1.55 var(--serif);color:#303b36;margin:0 0 11px}
+  .about-zh{border-left:1px solid #d2d7d2;padding-left:26px}
+  .about-zh p{font-size:13.5px;line-height:1.69}
+  .about-link{display:inline-block;font:14px var(--serif);color:var(--green);background:transparent;border:0;border-bottom:1px solid #66877a;padding:0 0 3px;margin-top:1px;cursor:pointer}
+  .about-link:hover{color:#153d2e}
+  .about-extra[hidden]{display:none}
+  .lang-zh .about-en{order:2;opacity:.89}
+  .lang-zh .about-zh{order:1;grid-column:1;grid-row:1;border-left:0;border-right:1px solid #d2d7d2;padding-left:0;padding-right:25px}
+  .lang-zh .about-en{grid-column:2;grid-row:1}
+  .lang-zh .about-zh p{font-size:14.5px}
+  .education-content{display:grid;grid-template-columns:1.4fr .7fr;gap:30px;align-items:center}
+  .timeline{display:grid;gap:0}
+  .edu-row{position:relative;display:grid;grid-template-columns:110px 66px 1fr;gap:16px;min-height:111px;align-items:center;padding:6px 0 13px}
+  .edu-row::before{content:"";position:absolute;left:7px;top:0;bottom:0;width:1px;background:#dadfd8}
+  .edu-row::after{content:"";position:absolute;top:46px;left:3px;background:#2c6351;width:9px;height:9px;border:2px solid #f5f5ef;border-radius:50%;z-index:2}
+  .year{font:14px/1.35 var(--serif);color:#5b6a64;padding-left:42px;white-space:nowrap}
+  .edu-mark{width:62px;height:62px;border-radius:50%;object-fit:contain;filter:saturate(.96)}
+  .edu-info h3{font:normal 18px/1.3 var(--serif);margin:0 0 3px}
+  .edu-cn{font:15px/1.3 var(--serif);margin:0 0 4px}
+  .edu-description{font:13px/1.45 var(--serif);color:#78807b;margin:0}
+  .edu-illustration{position:relative}
+  .edu-illustration img{width:100%;filter:grayscale(1) saturate(.2) contrast(.87) opacity(.75);mix-blend-mode:multiply}
+  .contact-grid{display:grid;grid-template-columns:1fr 1.45fr 1fr;gap:42px;padding:3px 0 22px}
+  .contact-blurb{max-width:890px;margin:0 0 28px 47px;font:16px/1.65 var(--serif);color:#4a6056}
+  .contact-entry{display:flex;gap:13px;align-items:center}
+  .contact-entry svg{width:30px;height:30px;flex:none;stroke:#27493e;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  .contact-entry label{display:block;font:16px var(--serif);margin:0 0 5px}
+  .contact-entry p,.contact-entry a{font:14px/1.5 var(--serif);color:#596b64;margin:0;overflow-wrap:anywhere}
+  .contact-entry a:hover{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+  .footer{padding:23px 0 30px;display:flex;justify-content:space-between;gap:14px;align-items:center;font:12px/1.5 var(--serif);color:#7b8580}
+  .footer a{text-decoration:underline;text-underline-offset:3px}
+  .back-to-top{position:fixed;z-index:70;right:24px;bottom:23px;width:45px;height:45px;display:grid;place-items:center;border-radius:50%;border:1px solid #c6d2c9;color:var(--green);background:#fffffff0;box-shadow:0 8px 22px #27493e20;opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .24s,transform .24s}
+  .back-to-top.visible{opacity:1;pointer-events:auto;transform:translateY(0)}
+  .js-motion [data-reveal]{opacity:.10;transform:translateY(24px);transition:opacity .72s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+  .js-motion [data-reveal].visible{opacity:1;transform:translateY(0)}
+  @media(max-width:1200px){.desktop-nav{gap:22px}.wordmark{font-size:25px}.hero-inner{min-height:600px}.hero-media{max-height:600px}.vision-note{right:0}.school-line{font-size:14px}.school-line.small{font-size:12px}.hero-body{font-size:13px}.card-description{margin-left:20px}.about-bilingual{gap:18px}.about-zh{padding-left:18px}}
+  @media(max-width:960px){.desktop-nav{display:none}.menu{display:block}.lang{margin-left:auto}.shell{width:calc(100% - 48px)}.hero-inner{grid-template-columns:1fr 1fr;min-height:575px}.hero h1{font-size:clamp(50px,7.2vw,75px)}.hero-copy{padding:36px 0;max-width:500px}.hero-tagline{font-size:25px}.hero-media::after{background:linear-gradient(90deg,var(--paper),transparent 27%)}.vision-note{font-size:15px;width:136px;min-height:160px;padding:15px 17px}.cards{grid-template-columns:repeat(2,1fr)}.card{min-height:270px}.about-grid{grid-template-columns:1fr}.mount-card{height:270px}.about-bilingual{grid-template-columns:1.2fr 1fr}.education-content{grid-template-columns:1fr}.edu-illustration{max-width:340px;justify-self:end;margin-top:-25px}}
+  @media(max-width:680px){:root{--nav-height:62px}.shell{width:calc(100% - 36px)}.wordmark{font-size:21px}.wordmark span{font-size:16px}.lang{font-size:12px}.topline{gap:10px}.hero-inner{display:flex;flex-direction:column;min-height:initial}.hero-copy{width:100%;padding:42px 0 27px}.hero h1{font-size:clamp(56px,12vw,78px)}.hero-tagline{font-size:28px}.name-cn{font-size:30px}.hero-body{font-size:14px;max-width:520px}.hero-media{width:100%;height:410px;align-self:stretch;overflow:hidden;border-radius:8px;margin-bottom:20px}.hero-image{object-position:50% 45%;border-radius:8px}.hero-media::after{background:linear-gradient(0deg,transparent 70%,var(--paper) 100%)}.vision-note{right:11px;top:12px;min-height:0;width:145px;padding:13px 14px;font-size:15px}.vision-note::before{margin-bottom:12px}.vision-note::after{margin-top:12px}.section{padding:35px 0}.section-heading{gap:12px;flex-wrap:wrap}.section-title{font-size:31px}.section-title .zh{font-size:19px;margin-left:7px}.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{padding:10px;min-height:250px}.card-visual{height:92px}.card-title{font-size:16px}.card-sub{font-size:12px}.card-description{font-size:12px;margin-left:0}.mount-card{height:250px}.about-bilingual,.lang-zh .about-bilingual{display:block}.about-zh,.lang-zh .about-zh{padding:15px 0 0;margin-top:17px;border:0;border-top:1px solid var(--line)}.about-bilingual p{font-size:14px}.edu-row{grid-template-columns:68px 48px 1fr;gap:10px;min-height:108px}.edu-row::before{left:4px}.edu-row::after{left:0}.year{padding-left:17px;font-size:12px}.edu-mark{width:47px;height:47px}.edu-info h3{font-size:15px}.edu-cn{font-size:13px}.edu-description{font-size:12px}.contact-grid{grid-template-columns:1fr;gap:27px}.contact-blurb{margin-left:0;font-size:15px}.footer{flex-wrap:wrap}.edu-illustration{max-width:100%;width:260px}.section-more{font-size:12px}}
+  @media(max-width:390px){.cards{grid-template-columns:1fr}.card{min-height:220px}.card-visual{height:100px}.wordmark{font-size:19px}.wordmark span{font-size:15px}.vision-note{width:123px;font-size:13px}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js-motion [data-reveal]{opacity:1;transform:none;transition:none}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+/* v1.4 editorial refinement — all headings and captions remain editable HTML */
+:root{--paper:#f7f6f2;--white:#fcfbf7;--ink:#15241e;--green:#255445;--muted:#62716a;--content:1220px;--serif:Georgia,"Times New Roman",serif;--cn-serif:"Noto Serif CJK SC","Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;--cn-sans:"Noto Sans CJK SC","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif}
+body{font-size:15px;letter-spacing:.005em}
+html[lang="zh-CN"] body{font-family:var(--cn-sans)}
+.wordmark{display:inline-flex;align-items:center;gap:10px;letter-spacing:-.035em;font-size:26px;font-weight:400}
+.wordmark span{font-family:var(--cn-serif);font-weight:500;letter-spacing:.055em;font-size:19px;line-height:1.4;padding-left:0;font-synthesis:none}
+.hero h1{font-size:clamp(64px,6.1vw,90px);line-height:1.04;letter-spacing:-.055em;font-weight:400}
+.name-cn{font-family:var(--cn-serif);font-size:clamp(35px,3.3vw,46px);font-weight:500;line-height:1.4;letter-spacing:.11em;font-synthesis:none;font-variant-east-asian:proportional-width;margin:0 0 19px}
+.hero-copy{padding:64px 0 62px;max-width:635px}
+.kicker{font-size:10px;letter-spacing:.35em;color:#6d8177}
+.hero-inner{grid-template-columns:minmax(0,52%) minmax(0,48%);min-height:685px}
+.hero-media{max-height:685px;background:#e9efee}
+.hero-image{object-fit:cover;object-position:50% 36%;border-radius:0 0 12px 0}
+.hero-media::after{background:linear-gradient(90deg,var(--paper) 0%,rgba(247,246,242,.8) 8%,rgba(247,246,242,.34) 20%,transparent 35%)}
+.hero-tagline{font-size:clamp(27px,2.7vw,37px);line-height:1.25;font-weight:400}
+.tagline-cn{font-family:var(--cn-serif);font-weight:500;font-size:15px}
+.vision-note{right:-16px;top:13%;background:rgba(249,250,247,.85);backdrop-filter:blur(14px);color:#2c463a;box-shadow:0 14px 55px rgba(32,66,53,.07)}
+.btn{border-radius:6px;padding:11px 24px}
+.section{padding:45px 0 43px}
+.section-heading{margin-bottom:27px}
+.section-title{font-size:38px;letter-spacing:-.04em}
+.section-title .zh{font-family:var(--cn-serif);font-size:20px;font-weight:500;vertical-align:baseline;letter-spacing:.055em}
+.cards{gap:14px}
+.card{background:linear-gradient(165deg,#fdfbf7,#f5f6f1);border-color:#e2e7df;box-shadow:0 3px 12px rgba(42,73,58,.025);border-radius:9px;padding:16px 18px 18px;min-height:288px}
+.card-visual{height:135px;margin-bottom:13px}
+.card-title{font-size:18px;letter-spacing:-.01em}
+.card-sub{font-family:var(--cn-serif);font-size:13px;font-weight:500}
+.card-description{font-size:13px;line-height:1.65;margin-left:33px}
+.about-grid{grid-template-columns:32% 1fr;gap:29px}
+.mount-card{height:305px;box-shadow:0 10px 20px rgba(12,45,33,.08)}
+.mount-card img{object-position:50% 47%}
+.about-bilingual p{font-size:14px;line-height:1.75}
+.about-zh p{font-family:var(--cn-serif);line-height:1.83;font-size:13px}
+.education-content{grid-template-columns:1.25fr .68fr;gap:30px}
+.timeline{padding-left:3px}
+.edu-row{min-height:116px;grid-template-columns:94px 70px 1fr;gap:20px;padding:12px 15px 12px 0}
+.edu-row + .edu-row{border-top:1px solid #e5e9e3}
+.edu-mark{width:68px;height:68px;padding:6px;border:1px solid #e7eae5;object-fit:contain;border-radius:50%;background:#fff;box-shadow:0 6px 22px rgba(26,60,45,.075)}
+.edu-info h3{font-size:19px;line-height:1.28;letter-spacing:-.025em}
+.edu-cn{font-family:var(--cn-serif);font-weight:500;color:#394a41;letter-spacing:.04em}
+.edu-description{font-size:12.5px;line-height:1.6;color:#66746d}
+.edu-illustration img{filter:grayscale(1) saturate(.2) contrast(.88) opacity(.7)}
+.contact-blurb{max-width:810px;font-size:16px;line-height:1.85;margin-left:47px;margin-bottom:25px}
+.contact-grid{gap:16px;padding-bottom:16px}
+.contact-entry{background:#fcfbf8;border:1px solid #e2e7df;border-radius:8px;padding:18px 18px;min-height:96px;gap:15px;transition:transform .2s,box-shadow .2s}
+.contact-entry:hover{transform:translateY(-3px);box-shadow:0 13px 24px rgba(41,76,58,.07)}
+.contact-entry svg{width:27px;height:27px}
+.contact-entry label{font-size:15px}
+.contact-entry a,.contact-entry p{font-size:13px}
+/* Mobile refinements override standard responsive typography */
+@media(max-width:1200px){.hero-inner{min-height:605px}.hero-media{max-height:605px}.school-line{font-size:14px}.hero-body{font-size:13px}}
+@media(max-width:960px){.hero-inner{min-height:600px}.hero h1{font-size:clamp(54px,6.2vw,78px)}.vision-note{right:2px}.education-content{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr 1fr}.hero-copy{padding:43px 0}.wordmark{font-size:24px}}
+@media(max-width:680px){.wordmark{font-size:20px;gap:5px}.wordmark span{font-size:16px}.hero-inner{min-height:initial;display:flex;flex-direction:column}.hero h1{font-size:clamp(57px,12vw,75px)}.name-cn{font-size:32px}.hero-copy{padding:38px 0 28px}.hero-media{width:100%;height:435px;max-height:none}.hero-image{object-position:50% 32%;border-radius:8px}.hero-media::after{background:linear-gradient(0deg,transparent 74%,rgba(247,246,242,.18) 100%)}.vision-note{top:13px;right:12px;font-size:14px;width:128px;min-height:unset;padding:12px}.section{padding:39px 0}.section-title{font-size:31px}.section-title .zh{font-size:17px}.card{min-height:250px;padding:12px}.card-visual{height:90px}.card-description{margin-left:0}.edu-row{grid-template-columns:65px 54px 1fr;gap:10px;min-height:126px}.edu-mark{width:52px;height:52px;padding:4px}.year{padding-left:16px;font-size:12px}.edu-info h3{font-size:15px}.edu-cn{font-size:13px}.edu-description{font-size:12px}.contact-grid{grid-template-columns:1fr}.contact-blurb{margin-left:0}.mount-card{height:265px}}
+@media(max-width:390px){.wordmark{font-size:18px}.wordmark span{font-size:14px}.card{min-height:230px}.cards{grid-template-columns:1fr}.card-visual{height:105px}.hero-media{height:390px}}
+
+
+/* V1.5: realistic source imagery, consistent fonts, school seals with honest text fallback. */
+:root{--cn-serif:"Noto Serif CJK SC","Noto Serif SC","Source Han Serif SC","Songti SC","STSong",serif}
+.wordmark span,.name-cn{font-family:var(--cn-serif);font-synthesis:none;font-variant-east-asian:normal}
+.wordmark span{font-size:19px;letter-spacing:.045em;line-height:1.4}
+.name-cn{font-size:clamp(35px,3.35vw,47px);letter-spacing:.035em;line-height:1.35;font-weight:500}
+.hero-copy{padding-top:60px;padding-bottom:60px}
+.school-line{max-width:580px;line-height:1.52}
+.hero-media{background:linear-gradient(120deg,#e1e8e6,#e9ece6)}
+.hero-image{object-position:50% 34%}
+.edu-row{grid-template-columns:94px 72px minmax(0,1fr)}
+.edu-mark{width:70px;height:70px;object-fit:contain;background:#fff;padding:5px;border:1px solid #d9e1dc;border-radius:50%;box-shadow:0 5px 20px rgba(26,54,42,.07)}
+.school-fallback{height:70px;width:70px;flex-shrink:0;place-content:center;text-align:center;border-radius:50%;background:#fff;border:1px solid #d9e1dc;font:700 15px/1 Georgia,serif;letter-spacing:-.025em;box-shadow:0 5px 20px rgba(26,54,42,.07)}
+.school-fallback[hidden]{display:none!important}
+.school-fallback.ustc{color:#155390;border-color:#bad3e8}
+.school-fallback.neau{color:#16734d;border-color:#b8d9ca}
+.mount-caption{bottom:17px;left:18px;color:#fff;font:13px/1.65 Georgia,"Noto Serif SC",serif;letter-spacing:.04em;text-shadow:0 1px 4px #0008;z-index:2}
+.mount-caption span{letter-spacing:0;font-size:12px}.mount-caption[hidden]{display:none!important}
+.photo-credit{position:absolute;right:12px;bottom:12px;z-index:3;font:10px/1.2 Georgia,serif;color:#fff;background:#1a2d27ac;padding:5px 7px;border-radius:4px;transition:background .2s}
+.photo-credit:hover{background:#13271edc}
+.photo-credit[hidden]{display:none!important}
+.mount-card img{filter:saturate(.88) contrast(.99);object-position:center 43%}
+@media(max-width:680px){.name-cn{font-size:32px}.edu-row{grid-template-columns:65px 53px minmax(0,1fr)}.edu-mark,.school-fallback{height:51px;width:51px}.school-fallback{font-size:11px}.hero-image{object-position:50% 32%}.mount-caption{font-size:11px}.photo-credit{font-size:9px}}
+
+
+/* V1.6: bundled user-supplied vector emblems for offline display. */
+.edu-mark{width:74px;height:74px;padding:5px;box-shadow:0 8px 22px rgba(35,65,50,.07)}
+.edu-row{grid-template-columns:94px 76px minmax(0,1fr)}
+@media(max-width:680px){.edu-row{grid-template-columns:65px 55px minmax(0,1fr)}.edu-mark{width:55px;height:55px;padding:3px}}
+  
+/* V1.7 — Rony is a personal name, while Renyi Geng remains the academic byline. */
+.name-alias{display:flex;align-items:baseline;gap:6px;font:13px/1.5 var(--sans);color:#6a7a72;margin:1px 0 18px;letter-spacing:.015em}
+.name-alias strong{color:#2c5b4c;font:italic 600 17px/1.3 Georgia,serif;letter-spacing:.01em}
+.alias-period{margin-left:-4px}
+@media(max-width:680px){.name-alias{margin-bottom:17px}}
+</style>
+  <!-- Browser tab / bookmark / phone home-screen icons -->
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><span id="progress-fill"></span></div>
+  <header class="topbar">
+    <div class="shell topline">
+      <a class="wordmark" href="#home">Renyi Geng <span>耿仁义</span></a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#home" data-nav="home" data-i18n="home">Home</a>
+        <a href="#about" data-nav="about" data-i18n="about">About</a>
+        <a href="#research" data-nav="research" data-i18n="research">Research</a>
+        <a href="#education" data-nav="education" data-i18n="education">Education</a>
+        <a href="notes/index.html" data-i18n="notes">Notes</a>
+        <a href="#contact" data-nav="contact" data-i18n="contact">Contact</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Choose website language"><button type="button" id="lang-en" aria-pressed="true">EN</button><span aria-hidden="true">|</span><button type="button" id="lang-zh" aria-pressed="false">中文</button></div>
+      <details class="menu" id="menu"><summary data-i18n="menu">Menu</summary><nav aria-label="Mobile navigation"><a href="#home" data-i18n="home">Home</a><a href="#about" data-i18n="about">About</a><a href="#research" data-i18n="research">Research</a><a href="#education" data-i18n="education">Education</a><a href="notes/index.html" data-i18n="notes">Notes</a><a href="#contact" data-i18n="contact">Contact</a></nav></details>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="shell hero-inner">
+        <div class="hero-copy">
+          <div class="kicker">AI for Science · Scientific Discovery</div>
+          <h1 id="hero-title">Renyi Geng</h1>
+          <p class="name-cn">耿仁义</p>
+          <p class="name-alias"><span data-i18n="callme">You can also call me</span> <strong>Rony</strong><span class="alias-period">.</span></p>
+          <p class="school-line" data-i18n="role1">M.S. Student at the University of Science and Technology of China</p>
+          <p class="school-line" data-i18n="role2">Research at Changchun Institute of Applied Chemistry (CIAC)</p>
+          <p class="school-line small" data-i18n="role3">University of Science and Technology of China (USTC) · Master's Student</p>
+          <div class="short-rule"></div>
+          <h2 class="hero-tagline" data-i18n="tagline">Curiosity-driven research<br>at the intersection of AI and Science.</h2>
+          <p class="tagline-cn" data-i18n="taglineCn">以好奇心驱动探索，在人工智能与自然科学的交汇处开展研究。</p>
+          <p class="hero-body" data-i18n="heroBody">I am interested in AI for Science, scientific reasoning, and intelligent scientific discovery. I hope to explore how AI can help us ask meaningful scientific questions and better understand the natural world.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#about"><span data-i18n="learn">Learn More</span><span aria-hidden="true">↓</span></a><a class="btn btn-outline" href="https://github.com/renyigeng" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.31-3.76-1.31-.5-1.3-1.25-1.65-1.25-1.65-1.02-.69.08-.68.08-.68 1.13.08 1.73 1.16 1.73 1.16 1.01 1.73 2.65 1.23 3.29.94.1-.73.39-1.23.71-1.51-2.47-.28-5.07-1.24-5.07-5.53 0-1.22.44-2.22 1.15-3.01-.12-.28-.5-1.43.11-2.97 0 0 .94-.3 3.08 1.15a10.7 10.7 0 0 1 5.6 0c2.14-1.45 3.08-1.15 3.08-1.15.61 1.54.23 2.69.11 2.97.72.79 1.15 1.79 1.15 3.01 0 4.3-2.6 5.24-5.08 5.52.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8Z"/></svg> GitHub <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <div class="hero-media"><img class="hero-image" src="assets/renyi-portrait.jpg" alt="Portrait artwork based on Renyi Geng's supplied photograph" fetchpriority="high" />
+          <aside class="vision-note" aria-label="Research vision" data-i18n="vision">From Scientific Questions to Intelligent Discovery.</aside>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="research" aria-labelledby="research-title"><div class="shell" data-reveal>
+      <div class="section-heading"><span class="section-number">01</span><h2 class="section-title" id="research-title"><span data-i18n="researchTitle">Research Interests</span><span class="zh">研究兴趣</span></h2><a class="section-more" href="#about"><span data-i18n="discoverMore">More</span>&nbsp; →</a></div>
+      <div class="cards">
+        <article class="card"><div class="card-visual"><img src="assets/card-ai.webp" alt="Abstract green scientific wave visualization" loading="lazy"></div><h3 class="card-title"><svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-4-3-9 0-8 4-4 2-2 8 1 8-1 4 4 6 7 3 3 3 8 1 7-3 3 0 5-6 1-8 1-4-4-7-8-4v16M7 8c3 0 4 3 4 4M16 7c-3 1-4 3-4 5M7 15l5-3 5 4"/></svg>AI for Science</h3><p class="card-sub">人工智能驱动的科学研究</p><p class="card-description" data-i18n="card1">Exploring how AI can advance scientific understanding across the natural sciences.</p></article>
+        <article class="card"><div class="card-visual"><img src="assets/card-agent.webp" alt="Scientific agent network visualization" loading="lazy"></div><h3 class="card-title"><svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4" r="3"/><circle cx="4" cy="19" r="3"/><circle cx="20" cy="19" r="3"/><path d="M11 7 5 16M13 7l6 9M7 19h10"/></svg>Scientific Agents</h3><p class="card-sub">科学智能体</p><p class="card-description" data-i18n="card2">Investigating intelligent systems for scientific reasoning, planning, and exploration.</p></article>
+        <article class="card"><div class="card-visual"><img src="assets/card-reason.webp" alt="Scientific reasoning surface visualization" loading="lazy"></div><h3 class="card-title"><svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l9-5 9 5v10l-9 5-9-5zM3 7l9 5 9-5M12 12v10"/></svg>Scientific Reasoning</h3><p class="card-sub">科学推理</p><p class="card-description" data-i18n="card3">Understanding how AI can evaluate evidence, reason, and support scientific decisions.</p></article>
+        <article class="card"><div class="card-visual"><img src="assets/card-compute.webp" alt="Abstract intersecting translucent scientific fields" loading="lazy"></div><h3 class="card-title"><svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5 9-5ZM3 12l9 5 9-5M3 17l9 5 9-5"/></svg>Computational Science</h3><p class="card-sub">计算科学</p><p class="card-description" data-i18n="card4">Integrating domain knowledge, computation, and data for interdisciplinary research.</p></article>
+      </div>
+    </div></section>
+    <section class="section" id="about" aria-labelledby="about-title"><div class="shell" data-reveal>
+      <div class="section-heading"><span class="section-number">02</span><h2 class="section-title" id="about-title"><span data-i18n="aboutTitle">About Me</span><span class="zh">关于我</span></h2></div>
+      <div class="about-grid">
+        <div class="mount-card"><img id="taishan-photo" src="https://upload.wikimedia.org/wikipedia/commons/a/a4/%E6%B3%B0%E5%B1%B1%E6%97%A5%E5%87%BA_-_Sunrise_at_Mount_Taishan_-_2012.07_-_panoramio.jpg" alt="真实泰山日出照片 / Sunrise at Mount Tai, Shandong" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/taishan-concept.webp';document.getElementById('taishan-credit').hidden=true;document.querySelector('.mount-caption').hidden=true;this.alt='泰山主题概念插画（离线备用）'"><div class="mount-caption">TAI’AN · SHANDONG<br><span data-i18n="hometown">My Hometown</span></div><a id="taishan-credit" class="photo-credit" href="https://commons.wikimedia.org/wiki/File:%E6%B3%B0%E5%B1%B1%E6%97%A5%E5%87%BA_-_Sunrise_at_Mount_Taishan_-_2012.07_-_panoramio.jpg" target="_blank" rel="noopener noreferrer" title="Photo by rheins, CC BY 3.0">© rheins · CC BY 3.0 ↗</a></div>
+        <div class="about-bilingual">
+          <div class="about-en"><p>I'm Renyi Geng (耿仁义), a master's student at the University of Science and Technology of China (USTC), conducting research at the Changchun Institute of Applied Chemistry (CIAC).</p><p>I grew up in Tai'an, Shandong, China. My interest in computing began in high school, and I have long been fascinated by the possibilities of bringing artificial intelligence into scientific research.</p><p>With an interdisciplinary background in natural sciences, mathematics, and computation, I am now focusing on AI for Science, hoping to understand how AI can help us ask meaningful scientific questions and better understand the natural world.</p><div id="extra-en" class="about-extra" hidden><p>I studied Food Science and Engineering at Northeast Agricultural University in its honors training program. I hope to grow into an independent researcher who can identify important scientific questions and investigate them rigorously.</p></div><button class="about-link" type="button" id="about-more-en" aria-expanded="false">Read more →</button></div>
+          <div class="about-zh"><p>我是耿仁义，成长于山东泰安，现为中国科学技术大学硕士研究生，在中国科学院长春应用化学研究所（CIAC）开展科研工作。</p><p>我从高中时期便开始接触编程。大学入学前后，我逐渐对人工智能与自然科学的交叉产生兴趣。</p><p>如今，我更加关注人工智能如何助力我们提出有意义的科学问题，并深化对自然世界的理解。</p><div id="extra-zh" class="about-extra" hidden><p>本科就读于东北农业大学食品科学与工程专业，接受拔尖人才创新班的培养。我希望未来成为一名能够独立提出科学问题、以严谨方法开展研究的科研工作者。</p></div><button class="about-link" type="button" id="about-more-zh" aria-expanded="false">了解更多 →</button></div>
+        </div>
+      </div>
+    </div></section>
+    <section class="section" id="education" aria-labelledby="education-title"><div class="shell" data-reveal>
+      <div class="section-heading"><span class="section-number">03</span><h2 class="section-title" id="education-title"><span data-i18n="educationTitle">Education</span><span class="zh">教育经历</span></h2></div>
+      <div class="education-content">
+        <div class="timeline">
+          <div class="edu-row"><div class="year">2025 —<br><span data-i18n="present">Present</span></div><img class="edu-mark" src="assets/ustc-emblem.svg" onerror="this.style.display='none';this.nextElementSibling.hidden=false" alt="中国科学技术大学校徽 / USTC emblem" loading="lazy" referrerpolicy="no-referrer"><span class="school-fallback ustc" hidden aria-label="USTC">USTC</span><div class="edu-info"><h3>University of Science and Technology of China (USTC)</h3><p class="edu-cn">中国科学技术大学</p><p class="edu-description" data-i18n="ustcDetail">M.S. in Polymer Chemistry and Physics · Master's Student · Research at CIAC</p></div></div>
+          <div class="edu-row"><div class="year">2021 —<br>2025</div><img class="edu-mark" src="assets/neau-emblem.svg" onerror="this.style.display='none';this.nextElementSibling.hidden=false" alt="东北农业大学校徽 / NEAU emblem" loading="lazy" referrerpolicy="no-referrer"><span class="school-fallback neau" hidden aria-label="NEAU">NEAU</span><div class="edu-info"><h3>Northeast Agricultural University (NEAU)</h3><p class="edu-cn">东北农业大学</p><p class="edu-description" data-i18n="neauDetail">B.Eng. in Food Science and Engineering · Honors Training Program</p></div></div>
+        </div>
+        <div class="edu-illustration" aria-hidden="true"><img src="assets/edu-sketch.webp" alt="" loading="lazy"></div>
+      </div>
+    </div></section>
+    <section class="section" id="contact" aria-labelledby="contact-title"><div class="shell" data-reveal>
+      <div class="section-heading"><span class="section-number">04</span><h2 class="section-title" id="contact-title"><span data-i18n="contactTitle">Contact</span><span class="zh">联系方式</span></h2></div>
+      <p class="contact-blurb" data-i18n="contactBlurb">I am always happy to exchange ideas about AI for Science, scientific reasoning, and interdisciplinary research. Feel free to reach out for a conversation or collaboration.</p>
+      <div class="contact-grid">
+        <div class="contact-entry"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 20c-5.5 1.8-5.5-3-7-3m16 6v-3.8a3.6 3.6 0 0 0-1-2.8c3.4-.4 7-1.6 7-7.3A5.7 5.7 0 0 0 22.5 5c.2-1.3.1-2.7-.5-4 0 0-2-.2-4 1.6a15 15 0 0 0-8 0C8-0.2 6 0 6 0c-.6 1.3-.7 2.7-.5 4A5.7 5.7 0 0 0 4 9.1c0 5.7 3.6 6.9 7 7.3a3.6 3.6 0 0 0-1 2.8V23" transform="translate(1 0) scale(.9)"/></svg><div><label>GitHub</label><a href="https://github.com/renyigeng" target="_blank" rel="noopener noreferrer">github.com/renyigeng</a></div></div>
+        <div class="contact-entry"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 8L22 6"/></svg><div><label>Email / 学术邮箱</label><a href="mailto:renyigeng@mail.ustc.edu.cn">renyigeng@mail.ustc.edu.cn</a></div></div>
+        <div class="contact-entry"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.8"/></svg><div><label data-i18n="location">Location</label><p data-i18n="city">Changchun, Jilin, China</p></div></div>
+      </div>
+    </div></section>
+  </main>
+  <div class="shell footer"><span>© 2026 Renyi Geng · 耿仁义</span><span><a href="notes/index.html">Notes / 博客</a> · <span data-i18n="footer">Made with curiosity · Hosted on GitHub Pages</span></span></div>
+  <button class="back-to-top" id="back-top" type="button" aria-label="Back to top">↑</button>
+  <script>
+  (()=>{
+    const dictionary={
+      en:{callme:'You can also call me',home:'Home',about:'About',research:'Research',education:'Education',notes:'Notes',contact:'Contact',menu:'Menu',role1:'M.S. Student at the University of Science and Technology of China',role2:'Research at Changchun Institute of Applied Chemistry (CIAC)',role3:'中国科学技术大学 · 硕士研究生',tagline:'Curiosity-driven research<br>at the intersection of AI and Science.',taglineCn:'以好奇心驱动探索，在人工智能与自然科学的交汇处开展研究。',heroBody:'I am interested in AI for Science, scientific reasoning, and intelligent scientific discovery. I hope to explore how AI can help us ask meaningful scientific questions and better understand the natural world.',learn:'Learn More',vision:'From Scientific Questions to Intelligent Discovery.',researchTitle:'Research Interests',discoverMore:'More',card1:'Exploring how AI can advance scientific understanding across the natural sciences.',card2:'Investigating intelligent systems for scientific reasoning, planning, and exploration.',card3:'Understanding how AI can evaluate evidence, reason, and support scientific decisions.',card4:'Integrating domain knowledge, computation, and data for interdisciplinary research.',aboutTitle:'About Me',hometown:'My Hometown',educationTitle:'Education',present:'Present',ustcDetail:'M.S. in Polymer Chemistry and Physics · Master\'s Student · Research at CIAC',neauDetail:'B.Eng. in Food Science and Engineering · Honors Training Program',contactTitle:'Contact',contactBlurb:'I am always happy to exchange ideas about AI for Science, scientific reasoning, and interdisciplinary research. Feel free to reach out for a conversation or collaboration.',location:'Location',city:'Changchun, Jilin, China',footer:'Made with curiosity · Hosted on GitHub Pages'},
+      zh:{callme:'也可以叫我',home:'首页',about:'关于我',research:'研究兴趣',education:'教育经历',notes:'随笔',contact:'联系',menu:'菜单',role1:'中国科学技术大学 · 高分子化学与物理专业硕士研究生',role2:'中国科学院长春应用化学研究所（CIAC）开展科研工作',role3:'University of Science and Technology of China (USTC)',tagline:'探索人工智能与自然科学交叉领域的更多可能。',taglineCn:'Curiosity-driven research at the intersection of AI and Science.',heroBody:'我关注 AI for Science、科学推理与智能驱动的科学发现，希望探索人工智能如何帮助我们提出有意义的科学问题，并深化对自然世界的理解。',learn:'了解更多',vision:'从科学问题出发，走向智能科学发现。',researchTitle:'Research Interests',discoverMore:'了解更多',card1:'探索人工智能如何深化对自然科学的理解并推动科学发现。',card2:'关注能够进行科学推理、规划和探索的智能系统。',card3:'探索人工智能如何评估证据、开展推理并辅助科学决策。',card4:'结合领域知识、计算方法与数据，开展交叉科学研究。',aboutTitle:'About Me',hometown:'我的家乡',educationTitle:'Education',present:'至今',ustcDetail:'高分子化学与物理 · 硕士在读 · CIAC 开展科研工作',neauDetail:'食品科学与工程 · 工学学士 · 拔尖人才创新班',contactTitle:'Contact',contactBlurb:'欢迎对 AI for Science、科学推理与交叉学科研究感兴趣的朋友来信交流。期待与你交流新的研究想法，也欢迎开展学术讨论与合作。',location:'所在城市',city:'中国 · 吉林长春',footer:'以好奇心为伴 · GitHub Pages 托管'}
+    };
+    const btnEn=document.getElementById('lang-en'),btnZh=document.getElementById('lang-zh');
+    const safeSet=(key,value)=>{try{localStorage.setItem(key,value)}catch(e){}};
+    const safeGet=(key)=>{try{return localStorage.getItem(key)}catch(e){return null}};
+    function changeLanguage(lang){document.documentElement.lang=lang==='zh'?'zh-CN':'en';document.body.classList.toggle('lang-zh',lang==='zh');btnEn.setAttribute('aria-pressed',String(lang==='en'));btnZh.setAttribute('aria-pressed',String(lang==='zh'));for(const el of document.querySelectorAll('[data-i18n]')){const val=dictionary[lang][el.dataset.i18n];if(val!==undefined){if(el.dataset.i18n==='tagline'){el.innerHTML=val}else{el.textContent=val}}}safeSet('renyi-site-lang',lang)}
+    btnEn.addEventListener('click',()=>changeLanguage('en'));btnZh.addEventListener('click',()=>changeLanguage('zh'));changeLanguage(safeGet('renyi-site-lang')==='zh'?'zh':'en');
+    for(const [button,extra] of [['about-more-en','extra-en'],['about-more-zh','extra-zh']]){const b=document.getElementById(button),e=document.getElementById(extra);b.addEventListener('click',()=>{const open=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',String(open));e.hidden=!open;b.textContent=button.endsWith('zh')?(open?'收起 ↑':'了解更多 →'):(open?'Read less ↑':'Read more →')})}
+    const progress=document.getElementById('progress-fill'),back=document.getElementById('back-top');let ticking=false;
+    function scrollUpdate(){const max=document.documentElement.scrollHeight-window.innerHeight;progress.style.transform='scaleX('+Math.min(1,max>0?window.scrollY/max:0)+')';back.classList.toggle('visible',window.scrollY>450);const ids=['home','research','about','education','contact'];let cur='home';for(const id of ids){const el=document.getElementById(id);if(el.getBoundingClientRect().top<=window.innerHeight*.42){cur=id}}if(window.scrollY+window.innerHeight>=document.documentElement.scrollHeight-20)cur='contact';document.querySelectorAll('[data-nav]').forEach(el=>{if(el.dataset.nav===cur)el.setAttribute('aria-current','location');else el.removeAttribute('aria-current')});ticking=false}
+    window.addEventListener('scroll',()=>{if(!ticking){window.requestAnimationFrame(scrollUpdate);ticking=true}},{passive:true});window.addEventListener('resize',scrollUpdate);scrollUpdate();
+    back.addEventListener('click',()=>window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'}));
+    const motion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if('IntersectionObserver' in window&&!motion){document.body.classList.add('js-motion');const io=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');io.unobserve(entry.target)}})},{threshold:.08,rootMargin:'0px 0px 20px 0px'});document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el))}
+    document.querySelectorAll('#menu nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').open=false));
+  })();
+  </script>
+</body>
+</html>
