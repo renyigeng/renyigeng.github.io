@@ -1,0 +1,98 @@
+# Pages CMS  /  Rony Academic Blog
+# Open https://app.pagescms.org/ and authorize renyigeng/renyigeng.github.io.
+# This file only configures the editor; authorization is an account-owner action.
+media:
+  input: assets/uploads
+  output: /assets/uploads
+  rename: safe
+  categories: [image]
+
+content:
+  - name: articles
+    label: "博客文章 / Blog posts"
+    type: collection
+    path: _posts
+    format: yaml-frontmatter
+    exclude: [".gitkeep"]
+    filename:
+      template: "{year}-{month}-{day}-{slug}.md"
+      field: false
+    view:
+      fields: [title, section, date]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: "标题 / Title"
+        type: string
+        required: true
+      - name: slug
+        label: "英文短链接 / URL slug"
+        type: string
+        required: true
+        description: "简单英文或拼音，例如: my-autumn-trip。仅用小写字母、数字和短横线。"
+        pattern: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      - name: date
+        label: "发表日期 / Date"
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: section
+        label: "文章栏目 / Section"
+        type: select
+        required: true
+        options:
+          values:
+            - name: academic
+              label: "学术笔记 / Academic Notes"
+            - name: life
+              label: "生活随笔 / Life & Reflections"
+      - name: tags
+        label: "文章标签 / Tags（可多选）"
+        type: select
+        options:
+          multiple: true
+          values:
+            - name: "论文阅读"
+              label: "论文阅读"
+            - name: "Scientific Agents"
+              label: "Scientific Agents"
+            - name: "低数据材料"
+              label: "低数据材料"
+            - name: "科研方法"
+              label: "科研方法"
+            - name: "朋友与生活"
+              label: "朋友与生活"
+            - name: "求学成长"
+              label: "求学成长"
+            - name: "旅行见闻"
+              label: "旅行见闻"
+            - name: "个人思考"
+              label: "个人思考"
+      - name: description
+        label: "摘要 / Excerpt"
+        type: text
+        description: "出现在文章列表中，建议 30–100 字。"
+      - name: cover
+        label: "封面图片 / Cover"
+        type: image
+        options:
+          path: assets/uploads
+      - name: thumbnail
+        label: "缩略图（可留空）/ Thumbnail"
+        type: image
+        description: "可选；旧文章已有优化缩略图，新文章可仅上传封面。"
+        options:
+          path: assets/uploads
+      - name: body
+        label: "文章正文 / Article"
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          path: assets/uploads
+          switcher: true

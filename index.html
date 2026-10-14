@@ -487,9 +487,9 @@ html[lang="zh-CN"] body{font-family:var(--cn-sans)}
         for(const post of posts.slice(0,2)){
           if(!post.title||!post.url||!post.url.startsWith('/'))continue;
           const card=document.createElement('article');card.className='home-post-card';
-          if(post.cover&&post.cover.startsWith('/')){
+          if((post.thumbnail||post.cover)&&(post.thumbnail||post.cover).startsWith('/')){
             const a=document.createElement('a');a.className='home-post-cover';a.href=post.url;
-            const im=document.createElement('img');im.src=post.cover;im.alt='';im.loading='lazy';a.append(im);card.append(a);
+            const im=document.createElement('img');im.src=post.thumbnail||post.cover;im.alt='';im.loading='lazy';im.decoding='async';a.append(im);card.append(a);
           }
           const info=document.createElement('div');info.className='home-post-info';
           const meta=document.createElement('p');meta.className='home-post-meta';

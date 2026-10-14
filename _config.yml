@@ -11,3 +11,11 @@ exclude:
   - COPYRIGHT_AND_ASSETS.md
   - DEPLOY_CHECKLIST.md
   - templates
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      lang: zh-CN

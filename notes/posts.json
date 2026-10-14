@@ -9,10 +9,13 @@ permalink: /notes/posts.json
     "title": {{ post.title | jsonify }},
     "url": {{ post.url | relative_url | jsonify }},
     "date": {{ post.date | date: "%Y-%m-%d" | jsonify }},
-    "category": {{ post.category | default: "Notes" | jsonify }},
-    "category_en": {{ post.category_en | default: "Notes" | jsonify }},
+    "category": {% if post.category %}{{ post.category | jsonify }}{% elsif post.section == "academic" %}"学术笔记"{% else %}"生活随笔"{% endif %},
+    "category_en": {% if post.category_en %}{{ post.category_en | jsonify }}{% elsif post.section == "academic" %}"Academic Notes"{% else %}"Life & Reflections"{% endif %},
+    "section": {{ post.section | default: "life" | jsonify }},
+    "tags": {{ post.tags | default: nil | jsonify }},
     "description": {{ post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 180 | jsonify }},
-    "cover": {% if post.cover %}{{ post.cover | relative_url | jsonify }}{% else %}""{% endif %}
+    "cover": {% if post.cover %}{{ post.cover | relative_url | jsonify }}{% else %}""{% endif %},
+    "thumbnail": {% if post.thumbnail %}{{ post.thumbnail | relative_url | jsonify }}{% elsif post.cover %}{{ post.cover | relative_url | jsonify }}{% else %}""{% endif %}
   }{% unless forloop.last %},{% endunless %}
 {% endfor %}
 ]
