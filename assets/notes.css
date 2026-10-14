@@ -299,8 +299,31 @@ body.notes-index .section-entrance-arrow{position:absolute;right:22px;bottom:18p
 .notes-filters{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
 .notes-filters a{font:12px/1.5 var(--sans);color:#fff0f7;padding:7px 13px;border:1px solid rgba(255,255,255,.30);background:rgba(8,17,36,.22);border-radius:99px;transition:background .15s,border-color .15s}
 .notes-filters a:is(:hover,:focus-visible),.notes-filters a.is-active{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.72)}
-.rony-click-star{position:fixed;z-index:100;pointer-events:none;user-select:none;font:19px/1 Georgia,serif;text-shadow:0 0 9px currentColor;transform:translate(-50%,-50%);animation:rony-twinkle .78s cubic-bezier(.18,.64,.36,1) both}
-@keyframes rony-twinkle{0%{opacity:0;transform:translate(-50%,-50%) scale(.30) rotate(-35deg)}18%{opacity:.98}100%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(.40) rotate(65deg)}}
+/* V3.0 finalized interaction: Firefly Glow (萤火微光).
+   One subtle radial illumination, no triangular stars or floating particles. */
+.rony-click-glow{
+  position:fixed;
+  z-index:100;
+  width:112px;
+  height:112px;
+  border-radius:50%;
+  pointer-events:none;
+  user-select:none;
+  transform:translate(-50%,-50%) scale(.16);
+  background:radial-gradient(circle,
+    rgba(255,247,214,.67) 0%,
+    rgba(247,224,200,.36) 13%,
+    rgba(210,203,253,.20) 34%,
+    rgba(160,191,246,.08) 54%,
+    transparent 73%);
+  filter:blur(3px);
+  animation:rony-glow-bloom .78s cubic-bezier(.15,.5,.25,1) both;
+}
+@keyframes rony-glow-bloom{
+  0%{opacity:0;transform:translate(-50%,-50%) scale(.16)}
+  30%{opacity:1;transform:translate(-50%,-50%) scale(.66)}
+  100%{opacity:0;transform:translate(-50%,-50%) scale(1.2)}
+}
 @media(max-width:800px){
   body.notes-index .article-card,body.notes-index .topic,body.notes-index .empty,body.notes-article .article-shell{
     -webkit-backdrop-filter:blur(5px) saturate(105%);
@@ -311,4 +334,4 @@ body.notes-index .section-entrance-arrow{position:absolute;right:22px;bottom:18p
   body.notes-index .section-entrance{min-height:150px}
 }
 @media(max-width:430px){.notes-filters a{padding:6px 10px;font-size:11px}}
-@media(prefers-reduced-motion:reduce){.rony-click-star{animation:none;display:none}}
+@media(prefers-reduced-motion:reduce){.rony-click-glow{animation:none;display:none}}
