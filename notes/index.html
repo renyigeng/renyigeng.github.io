@@ -53,6 +53,8 @@ async function loadPosts(){
   for(const post of visible){
    if(!post.title||!post.url||!post.url.startsWith('/'))continue;
    const card=document.createElement('article');card.className='article-card post-preview-card';
+   const hasCover=Boolean((post.thumbnail||post.cover)&&(post.thumbnail||post.cover).startsWith('/'));
+   if(!hasCover)card.classList.add('post-preview-card--no-cover');
    if((post.thumbnail||post.cover)&&(post.thumbnail||post.cover).startsWith('/')){
     const cover=document.createElement('a');cover.href=post.url;cover.className='post-preview-cover';
     const pic=document.createElement('img');pic.src=post.thumbnail||post.cover;pic.alt='';pic.loading='lazy';pic.decoding='async';cover.append(pic);card.append(cover);

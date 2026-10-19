@@ -88,6 +88,38 @@ content:
         description: "可选；旧文章已有优化缩略图，新文章可仅上传封面。"
         options:
           path: assets/uploads
+      - name: gallery_layout
+        label: "正文图片布局 / Photo layout"
+        type: select
+        description: "任选单图、双图或四宫格，随后在下方上传对应数量的照片。"
+        options:
+          values:
+            - name: single
+              label: "单图 / One image"
+            - name: double
+              label: "双图并排 / Two images"
+            - name: quad
+              label: "四宫格 / Four images"
+      - name: gallery_image_1
+        label: "正文配图 1 / Gallery image 1"
+        type: image
+        options:
+          path: assets/uploads
+      - name: gallery_image_2
+        label: "正文配图 2 / Gallery image 2"
+        type: image
+        options:
+          path: assets/uploads
+      - name: gallery_image_3
+        label: "正文配图 3 / Gallery image 3"
+        type: image
+        options:
+          path: assets/uploads
+      - name: gallery_image_4
+        label: "正文配图 4 / Gallery image 4"
+        type: image
+        options:
+          path: assets/uploads
       - name: body
         label: "文章正文 / Article"
         type: rich-text

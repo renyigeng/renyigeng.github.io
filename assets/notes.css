@@ -335,3 +335,24 @@ body.notes-index .section-entrance-arrow{position:absolute;right:22px;bottom:18p
 }
 @media(max-width:430px){.notes-filters a{padding:6px 10px;font-size:11px}}
 @media(prefers-reduced-motion:reduce){.rony-click-glow{animation:none;display:none}}
+
+
+/* 2026-10: content-first previews, photo gallery via Pages CMS. */
+body.notes-index .post-preview-card.post-preview-card--no-cover{
+  grid-template-columns:minmax(0,1fr);
+}
+.post-photo-gallery-generated.post-photo-grid--single{
+  grid-template-columns:minmax(0,1fr);
+}
+.post-photo-gallery-generated.post-photo-grid--single .post-photo img{
+  width:100%;height:auto;max-height:650px;object-fit:contain;
+}
+.post-photo-gallery-generated.post-photo-grid--double,
+.post-photo-gallery-generated.post-photo-grid--quad{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+@media(max-width:420px){
+  .post-photo-gallery-generated.post-photo-grid--double,
+  .post-photo-gallery-generated.post-photo-grid--quad{gap:8px}
+  .post-photo-gallery-generated .post-photo img{height:clamp(115px,35vw,180px)}
+}
