@@ -1,0 +1,267 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ChatGPT//Exam Life Warm Plan V3//ZH-CN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:考研生活与温柔鼓励
+X-WR-TIMEZONE:Asia/Shanghai
+BEGIN:VTIMEZONE
+TZID:Asia/Shanghai
+X-LIC-LOCATION:Asia/Shanghai
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0800
+TZOFFSETTO:+0800
+TZNAME:CST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:exam-life-warm-v3-00@chatgpt-calendar.local
+DTSTAMP:20261026T050000Z
+DTSTART;TZID=Asia/Shanghai:20261027T074500
+DTEND;TZID=Asia/Shanghai:20261027T081000
+SUMMARY:☀️ 早安｜新的一天，也要好好爱自己
+DESCRIPTION:7:45–7:50起床，尽量最晚8:10离床。拉开窗帘、洗
+ 漱、去吃早餐。\n早安呀！别急着要求今天一定多厉害，
+ 先好好起床就是很棒的开始。我希望你每天都有精神，
+ 也有好心情。
+RRULE:FREQ=DAILY
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:☀️ 早安｜新的一天，也要好好爱自己
+TRIGGER:PT0M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:exam-life-warm-v3-01@chatgpt-calendar.local
+DTSTAMP:20261026T050000Z
+DTSTART;TZID=Asia/Shanghai:20261027T081000
+DTEND;TZID=Asia/Shanghai:20261027T083000
+SUMMARY:🥣 早餐｜先照顾好自己
+DESCRIPTION:记得吃点早餐，不要饿着肚子学习。\n比起你一
+ 天背下多少知识，我也很在意你有没有好好吃饭。吃饱
+ 了，才有力气去做想做的事。
+RRULE:FREQ=DAILY
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:exam-life-warm-v3-02@chatgpt-calendar.local
+DTSTAMP:20261026T050000Z
+DTSTART;TZID=Asia/Shanghai:20261027T090000
+DTEND;TZID=Asia/Shanghai:20261027T115000
+SUMMARY:📖 上午学习｜慢慢来，也是在前进
+DESCRIPTION:这是你的专注学习时间，不指定科目；按自己的
+ 复习进度安排。\n一道题一道题地做，一页书一页书地看
+ 。偶尔卡住也没关系，我知道你在认真努力。
+RRULE:FREQ=DAILY
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📖 上午学习｜慢慢来，也是在前进
+TRIGGER:-PT5M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:exam-life-warm-v3-03@chatgpt-calendar.local
+DTSTAMP:20261026T050000Z
+DTSTART;TZID=Asia/Shanghai:20261027T120000
+DTEND;TZID=Asia/Shanghai:20261027T123500
+SUMMARY:🍚 午饭｜学习很重要，你也很重要
+DESCRIPTION:吃午饭，暂时放下学习任务。\n好好吃饭呀！不
+ 用连吃饭都争分夺秒。照顾好身体，是能走得更远的重
+ 要一部分。
+RRULE:FREQ=DAILY
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🍚 午饭｜学习很重要，你也很重要
+TRIGGER:PT0M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:exam-life-warm-v3-04@chatgpt-calendar.local
+DTSTAMP:20261026T050000Z
+DTSTART;TZID=Asia/Shanghai:20261027T124000
+DTEND;TZID=Asia/Shanghai:20261027T134500
+SUMMARY:😴 午休｜把手机放一边，安心休息
+DESCRIPTION:12:40停止刷手机，准备午休；尽量12:50开始休息
+ ，13:40–13:50起床。起床请另设手机闹钟。\n午休不是偷
+ 懒，是让下午的你更有精神。手机里的内容可以等，先
+ 让自己舒舒服服休息一会儿。
+RRULE:FREQ=DAILY
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:😴 午休｜把手机放一边，安心休息
+TRIGGER:PT0M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:exam-life-warm-v3-05@chatgpt-calendar.local
+DTSTAMP:20261026T050000Z
+DTSTART;TZID=Asia/Shanghai:20261027T140000
+DTEND;TZID=Asia/Shanghai:20261027T173000
+SUMMARY:🌱 下午学习｜今天也在一点点成长
+DESCRIPTION:专心复习即可，不限定具体科目。\n你不必和所
+ 有人比较，也不用因为一时状态不好就否定自己。踏踏
+ 实实走过的每一天，都有意义。
+RRULE:FREQ=DAILY
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:exam-life-warm-v3-06@chatgpt-calendar.local
+DTSTAMP:20261026T050000Z
+DTSTART;TZID=Asia/Shanghai:20261027T180000
+DTEND;TZID=Asia/Shanghai:20261027T183000
+SUMMARY:🥗 晚餐｜记得吃蔬菜，也吃点水果
+DESCRIPTION:正常吃晚餐，有条件就配上蔬菜、水果，注意饮
+ 食均衡。\n今天也辛苦啦，记得对自己的身体好一点。希
+ 望你不只学得好，也吃得香、睡得安稳。
+RRULE:FREQ=DAILY
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🥗 晚餐｜记得吃蔬菜，也吃点水果
+TRIGGER:PT0M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:exam-life-warm-v3-07@chatgpt-calendar.local
+DTSTAMP:20261026T050000Z
+DTSTART;TZID=Asia/Shanghai:20261027T190000
+DTEND;TZID=Asia/Shanghai:20261027T203000
+SUMMARY:✨ 晚间学习｜认真就好，不用苛责自己
+DESCRIPTION:晚间自由安排学习科目与任务；20:00可抽一分钟
+ 处理微信运动点赞。\n如果今天状态好，就多推进一点；
+ 如果今天很累，也可以调整节奏。努力不是让自己永远
+ 绷紧。
+RRULE:FREQ=DAILY
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:exam-life-warm-v3-08@chatgpt-calendar.local
+DTSTAMP:20261026T050000Z
+DTSTART;TZID=Asia/Shanghai:20261026T200000
+DTEND;TZID=Asia/Shanghai:20261026T200500
+SUMMARY:❤️ 20:00 微信运动点赞｜想起彼此的小事
+DESCRIPTION:打开微信运动，给对方今天的步数点个赞。\n忙
+ 碌的时候也记得彼此呀。一点点小互动，就能让平凡的
+ 一天多一点甜。
+RRULE:FREQ=DAILY
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:❤️ 20:00 微信运动点赞｜想起彼此的小事
+TRIGGER:PT0M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:exam-life-warm-v3-09@chatgpt-calendar.local
+DTSTAMP:20261026T050000Z
+DTSTART;TZID=Asia/Shanghai:20261027T210000
+DTEND;TZID=Asia/Shanghai:20261027T213000
+SUMMARY:🚿 洗澡｜把疲惫轻轻洗掉
+DESCRIPTION:暂按周二、周四和周日安排洗澡；运动出汗较多
+ 或需要时可增加。\n洗个舒服的澡，好好放松。今天已经
+ 很努力啦，现在该把时间留一点给自己。
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH,SU
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🚿 洗澡｜把疲惫轻轻洗掉
+TRIGGER:-PT10M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:exam-life-warm-v3-10@chatgpt-calendar.local
+DTSTAMP:20261026T050000Z
+DTSTART;TZID=Asia/Shanghai:20261026T233000
+DTEND;TZID=Asia/Shanghai:20261026T234000
+SUMMARY:🌙 今日小复盘｜看见今天的小收获
+DESCRIPTION:用5–10分钟简单想想：\n① 今天实际做了什么、
+ 学到了什么？\n② 哪件事让我觉得有一点点进步？\n③ 
+ 今天状态怎么样，吃饭、休息有没有照顾好自己？\n④ 
+ 明天最重要的一件事是什么？\n不必写长篇，更不用为不
+ 够完美而责怪自己。你认真生活的样子，我一直看在眼
+ 里。
+RRULE:FREQ=DAILY
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🌙 今日小复盘｜看见今天的小收获
+TRIGGER:PT0M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:exam-life-warm-v3-11@chatgpt-calendar.local
+DTSTAMP:20261026T050000Z
+DTSTART;TZID=Asia/Shanghai:20261026T234500
+DTEND;TZID=Asia/Shanghai:20261027T001500
+SUMMARY:🌙 睡前准备｜别让手机偷走睡眠
+DESCRIPTION:洗漱、放下手机、逐渐安静下来，争取00:15–00:3
+ 0入睡，尽量不晚于01:00。\n今天先到这里吧。没做完的事
+ ，明天还有机会。比起多熬一小时，我更希望你明天醒
+ 来觉得轻松。晚安。
+RRULE:FREQ=DAILY
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🌙 睡前准备｜别让手机偷走睡眠
+TRIGGER:PT0M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:exam-life-warm-v3-12@chatgpt-calendar.local
+DTSTAMP:20261026T050000Z
+DTSTART;TZID=Asia/Shanghai:20261027T001500
+DTEND;TZID=Asia/Shanghai:20261027T074500
+SUMMARY:💤 睡眠时间｜安心睡，明天再出发
+DESCRIPTION:预留约7小时30分钟在床休息时间，实际睡眠时间
+ 会更短，若经常睡不够就应提前入睡或调整作息。\n好好
+ 睡觉觉。愿你今晚睡得踏实，醒来有精神，不用带着压
+ 力入梦。
+RRULE:FREQ=DAILY
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:exam-life-warm-v3-13@chatgpt-calendar.local
+DTSTAMP:20261026T050000Z
+DTSTART;TZID=Asia/Shanghai:20261031T213000
+DTEND;TZID=Asia/Shanghai:20261031T215000
+SUMMARY:📚 周六温柔复盘｜学习进步，也照顾心情
+DESCRIPTION:花15–20分钟，简单回顾这一周。\n【学习】① 
+ 这周真正学会了什么？② 哪件事比上周更熟练了？③ 最
+ 需要调整的一点是什么？\n【状态】④ 精神状态有比上
+ 周好一点吗？⑤ 这周睡得怎么样：睡眠时长、质量、醒
+ 来后的精力是否有所改善？⑥ 有好好吃饭、休息、照顾
+ 身体吗？\n【生活】⑦ 这一周除了学习，有没有什么事
+ 情让我开心？有没有看电影、出去走走、和喜欢的人聊
+ 聊天？⑧ 下周想给自己留一个什么小期待？\n不需要每
+ 个答案都很好，也不用逼自己进步得很快。考研生活不
+ 该只剩学习、吃饭和睡觉。希望你越来越接近梦想，也
+ 越来越健康、轻松、快乐。无论进度快慢，我都愿意听
+ 你说这一周过得怎么样。
+RRULE:FREQ=WEEKLY;BYDAY=SA
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📚 周六温柔复盘｜学习进步，也照顾心情
+TRIGGER:PT0M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
